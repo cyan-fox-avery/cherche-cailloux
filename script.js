@@ -227,6 +227,66 @@
       mastery:{fact:'Some sphalerite can glow under ultraviolet light, and certain specimens show especially bright fluorescence.'}
     },
 
+    scheelite: {
+      name:'Scheelite', subtitle:'Tungsten ore → Tungsten', family:'ore', wing:'ores', iconClass:'ore scheelite',
+      signature:{id:'calcium-tungstate',label:'Calcium tungstate',formula:'CaWO₄'},
+      stages:['ore','refined'], stageLabels:{ore:'Scheelite ore',refined:'Tungsten'}, prices:{ore:58,refined:128},
+      process:{ore:'refined'}, processLabels:{ore:'Refine to tungsten'}, workshopRequired:4,
+      facts:{
+        ore:'Scheelite is calcium tungstate and an important ore of tungsten. Many specimens fluoresce blue-white under shortwave ultraviolet light.',
+        refined:'Tungsten has the highest melting point of any pure metal and is valued where heat resistance and hardness matter.'
+      },
+      mastery:{fact:'Scheelite fluorescence comes from its tungstate groups. Small chemical substitutions can shift the colour and brightness of the glow.'}
+    },
+    willemite: {
+      name:'Willemite', subtitle:'Zinc silicate · Zn₂SiO₄', family:'mineral', wing:'minerals', iconClass:'gem willemite',
+      signature:{id:'zinc-silicate',label:'Zinc silicate',formula:'Zn₂SiO₄'},
+      stages:['raw','tumbled','cut'], stageLabels:{raw:'Raw',tumbled:'Tumbled',cut:'Cut'}, prices:{raw:54,tumbled:100,cut:188},
+      process:{raw:'tumbled',tumbled:'cut'}, processLabels:{raw:'Tumble 1',tumbled:'Cut 1'}, workshopRequired:4,
+      facts:{
+        raw:'Willemite is a zinc silicate mineral. Manganese-bearing specimens can produce an intensely bright green fluorescence under ultraviolet light.',
+        tumbled:'Polishing can reveal willemite’s glassy lustre while preserving the chemistry responsible for fluorescence.',
+        cut:'Transparent willemite is uncommon, but suitable crystals can be faceted into distinctive collector stones.'
+      },
+      mastery:{fact:'Willemite became famous among fluorescent-mineral collectors because some specimens glow a striking neon green under shortwave UV.'}
+    },
+    hackmanite: {
+      name:'Hackmanite', subtitle:'Tenebrescent sodalite variety', family:'mineral', wing:'minerals', iconClass:'gem hackmanite',
+      signature:{id:'sodalite-group',label:'Sodalite-group aluminosilicate',formula:'variable'},
+      stages:['raw','tumbled','cut'], stageLabels:{raw:'Raw',tumbled:'Tumbled',cut:'Cut'}, prices:{raw:62,tumbled:116,cut:220},
+      process:{raw:'tumbled',tumbled:'cut'}, processLabels:{raw:'Tumble 1',tumbled:'Cut 1'}, workshopRequired:4,
+      facts:{
+        raw:'Hackmanite is a sulfur-bearing variety of sodalite famous for tenebrescence: ultraviolet light can temporarily deepen or change its colour.',
+        tumbled:'A polished surface makes hackmanite’s reversible colour change easier to see, though the strength varies from specimen to specimen.',
+        cut:'Transparent hackmanite can be faceted, but collectors often prize its light-sensitive colour behaviour as much as its appearance.'
+      },
+      mastery:{fact:'Tenebrescence is reversible photochromism. A hackmanite specimen can change colour after UV exposure and gradually fade back in ordinary light.'}
+    },
+    apatite: {
+      name:'Apatite', subtitle:'Calcium phosphate mineral group', family:'mineral', wing:'minerals', iconClass:'gem apatite',
+      signature:{id:'apatite-group',label:'Calcium phosphate',formula:'Ca₅(PO₄)₃(F,Cl,OH)'},
+      stages:['raw','tumbled','cut'], stageLabels:{raw:'Raw',tumbled:'Tumbled',cut:'Cut'}, prices:{raw:48,tumbled:88,cut:168},
+      process:{raw:'tumbled',tumbled:'cut'}, processLabels:{raw:'Tumble 1',tumbled:'Cut 1'}, workshopRequired:4,
+      facts:{
+        raw:'Apatite is a group of phosphate minerals that can occur in many colours. It defines hardness 5 on the Mohs scale.',
+        tumbled:'Apatite can take a bright polish, but its moderate hardness means polished pieces can scratch more easily than quartz.',
+        cut:'Transparent apatite can be faceted into vivid gems, though it is usually better suited to careful wear than everyday rings.'
+      },
+      mastery:{fact:'The name apatite comes from a Greek word meaning “to deceive,” because its crystals can resemble several other minerals.'}
+    },
+    opal: {
+      name:'Opal', subtitle:'Hydrated silica mineraloid', family:'mineral', wing:'minerals', iconClass:'gem opal',
+      signature:{id:'hydrated-silica',label:'Hydrated amorphous silica',formula:'SiO₂·nH₂O'},
+      stages:['raw','tumbled','cut'], stageLabels:{raw:'Raw',tumbled:'Tumbled',cut:'Cut'}, prices:{raw:68,tumbled:126,cut:242},
+      process:{raw:'tumbled',tumbled:'cut'}, processLabels:{raw:'Tumble 1',tumbled:'Cut 1'}, workshopRequired:4,
+      facts:{
+        raw:'Opal is a mineraloid rather than a true mineral because it lacks a regular crystal structure. It contains variable amounts of water.',
+        tumbled:'Some opal shows play-of-colour caused by light interacting with an orderly arrangement of microscopic silica spheres.',
+        cut:'Opal is usually cut as a cabochon rather than faceted so its colour effects can be viewed across a broad curved surface.'
+      },
+      mastery:{fact:'Not every opal shows play-of-colour. Common opal can still be beautiful even when it lacks the shifting spectral flashes associated with precious opal.'}
+    },
+
     trilobite: {
       name:'Trilobite', subtitle:'Fossil arthropod', family:'fossil', wing:'fossils', iconClass:'round trilobite', iconText:'≋',
       signature:{id:'fossil',label:'Fossilized biological material',formula:''},
@@ -252,6 +312,12 @@
       stages:['found'], stageLabels:{found:'Fossil specimen'}, prices:{found:140}, process:{},
       facts:{found:'Brachiopods are marine animals with two shells. They can resemble clams, but their anatomy and evolutionary history are very different.'}
     },
+    belemnite: {
+      name:'Belemnite', subtitle:'Fossil squid-like cephalopod', family:'fossil', wing:'fossils', iconClass:'round belemnite', iconText:'▸',
+      signature:{id:'fossil',label:'Fossilized biological material',formula:''},
+      stages:['found'], stageLabels:{found:'Fossil specimen'}, prices:{found:210}, process:{},
+      facts:{found:'Belemnites were extinct squid-like cephalopods. Their hard internal guards often fossilize as distinctive bullet-shaped objects.'}
+    },
     surveyMarker: {
       name:'Worn Survey Marker', subtitle:'Historical mine survey marker', family:'artifact', wing:'history', iconClass:'tag survey-marker', iconText:'△', metalDetectable:true,
       signature:{id:'artifact',label:'Historical object',formula:''},
@@ -265,6 +331,12 @@
       facts:{found:'Drilling tools transformed hard-rock mining by making it faster to bore holes for blasting and excavation.'}
     },
 
+    railSpike: {
+      name:'Old Rail Spike', subtitle:'Historical mine-haulage hardware', family:'artifact', wing:'history', iconClass:'tag rail-spike', iconText:'⌟', metalDetectable:true,
+      signature:{id:'artifact',label:'Historical object',formula:''},
+      stages:['found'], stageLabels:{found:'Historical artifact'}, prices:{found:235}, process:{},
+      facts:{found:'Underground rail systems carried ore, waste rock, people, and supplies. Hardware such as spikes and fasteners helped keep those haulage tracks in place.'}
+    },
     miningTag: {
       name:'Mining Tag', subtitle:'Historical mine check', family:'artifact', wing:'history', iconClass:'tag mining-tag', metalDetectable:true, iconText:'#',
       signature:{id:'artifact',label:'Historical object',formula:''},
@@ -277,6 +349,18 @@
       stages:['found'], stageLabels:{found:'Historical artifact'}, prices:{found:100}, process:{},
       facts:{found:'Underground lamps changed dramatically over time, from open flames to safety lamps and eventually electric lighting. Safer designs were especially important where flammable gases could accumulate.'}
     }
+  };
+
+  const SPARKLE_KEYS = new Set(['quartz','amethyst','garnet','topaz','citrine','calcite','fluorite','aquamarine','sapphire','roseQuartz','malachite','ruby','emerald','willemite','hackmanite','apatite','opal']);
+  const UV_CLASSES = {
+    fluorite:'uv-fluorite',
+    calcite:'uv-calcite',
+    ruby:'uv-ruby',
+    sphalerite:'uv-sphalerite',
+    scheelite:'uv-scheelite',
+    willemite:'uv-willemite',
+    hackmanite:'uv-hackmanite',
+    apatite:'uv-apatite'
   };
 
   const WINGS = [
@@ -306,6 +390,11 @@
       name:'Crystal Veins',
       materials:{quartz:4,amethyst:4,hematite:3,chalcopyrite:3,garnet:5,topaz:5,pyrite:4,citrine:6,calcite:5,fluorite:6,aquamarine:7,sapphire:6,cassiterite:4,roseQuartz:9,malachite:8,ruby:5,emerald:4,galena:6,sphalerite:6},
       sideFinds:[{key:'brachiopod',weight:33},{key:'ammonite',weight:20},{key:'crinoidStem',weight:10},{key:'drillBit',weight:18},{key:'surveyMarker',weight:11},{key:'miningLamp',weight:8}]
+    },
+    5:{
+      name:'Luminous Zone',
+      materials:{quartz:3,amethyst:2,calcite:5,fluorite:6,aquamarine:3,sapphire:3,roseQuartz:3,ruby:3,sphalerite:4,scheelite:11,willemite:10,hackmanite:8,apatite:10,opal:7},
+      sideFinds:[{key:'belemnite',weight:42},{key:'railSpike',weight:28},{key:'brachiopod',weight:10},{key:'drillBit',weight:9},{key:'surveyMarker',weight:6},{key:'miningLamp',weight:5}]
     }
   };
 
@@ -334,16 +423,18 @@ const DURABILITY_LEVELS = [
   ];
 
   const WORKSHOP_LEVELS = [
-    {name:'Basic Workshop',cost:180,next:'Precision Workshop',description:'Handles quartz, amethyst, iron ore, and copper ore.'},
-    {name:'Precision Workshop',cost:650,next:'Advanced Lapidary',description:'Adds garnet, topaz, citrine, calcite, fluorite, cassiterite, and other mid-game materials.'},
-    {name:'Advanced Lapidary',cost:1250,next:'Master Lapidary',description:'Can process aquamarine, sapphire, rose quartz, malachite, galena, and sphalerite.'},
-    {name:'Master Lapidary',cost:null,next:null,description:'Handles ruby and emerald. Processing remains free.'}
+    {name:'Basic Workshop',cost:180,next:'Precision Workshop',description:'Handles your earliest processable minerals and ores.'},
+    {name:'Precision Workshop',cost:650,next:'Advanced Lapidary',description:'Adds support for a broader range of mid-game minerals and ores.'},
+    {name:'Advanced Lapidary',cost:1250,next:'Master Lapidary',description:'Handles tougher gemstones and deeper metal-bearing ores.'},
+    {name:'Master Lapidary',cost:2400,next:'Specialist Lapidary',description:'Handles demanding deep-zone gemstones and prepares the workshop for unusual material.'},
+    {name:'Specialist Lapidary',cost:null,next:null,description:'Processes the current deepest-zone materials. Processing remains free.'}
   ];
 
   const DEPTH_UPGRADES = {
-    2:{cost:225,description:'Unlock Depth 2: the Lower Works, adding garnet, topaz, pyrite, and new fossil hunting.'},
-    3:{cost:850,description:'Unlock Depth 3: the Deep Gallery, adding new quartz varieties, fluorite, beryl, corundum, tin ore, and deeper historical finds.'},
-    4:{cost:1800,description:'Unlock Depth 4: the Crystal Veins, adding ruby, emerald, rose quartz, malachite, lead and zinc ores, plus new fossils and artifacts.'}
+    2:{cost:225,description:'Unlock Depth 2: the Lower Works, adding new gemstones, metallic minerals, and more fossil hunting.'},
+    3:{cost:850,description:'Unlock Depth 3: the Deep Gallery, adding new crystal families, colourful minerals, another metal-bearing ore, and deeper historical finds.'},
+    4:{cost:1800,description:'Unlock Depth 4: the Crystal Veins, adding high-grade gemstones, new metal-bearing ores, fossils, and artifacts.'},
+    5:{cost:3600,description:'Unlock Depth 5: the Luminous Zone, adding fluorescent minerals, an unusual heavy-metal ore, a mineraloid, belemnites, and deeper mining history.'}
   };
 
 
@@ -371,6 +462,8 @@ const DURABILITY_LEVELS = [
     {id:'shinyGoblin',icon:'💎',name:'Shiny Goblin',description:'Find 100 total specimens.',condition:s=>totalFound()>=100},
     {id:'fullCoverage',icon:'▦',name:'Broad Coverage',description:'Survey at least half of one rock face.',condition:s=>s.meta.fullSurveyFaces>=1},
     {id:'allThatGlitters',icon:'🌟',name:'All That Glitters',description:'Master citrine, topaz, and pyrite.',condition:s=>['citrine','topaz','pyrite'].every(k=>isMastered(k))},
+    {id:'glowUp',icon:'🔦',name:'Glow Up',description:'View a fluorescent museum specimen under UV.',condition:s=>s.meta.uvViews>=1&&countCollectedUvMaterials()>=1},
+    {id:'glowShow',icon:'✨',name:'The Glow Show',description:'Have five different fluorescent materials represented in the museum.',condition:s=>s.meta.uvViews>=1&&countCollectedUvMaterials()>=5},
     {id:'rockGoCrunch',icon:'🪨',name:'Rock Go Crunch',description:'You remembered the old name.',hidden:true,condition:s=>s.meta.taglineTaps>=13}
   ];
 
@@ -597,6 +690,65 @@ const DURABILITY_LEVELS = [
       name:'Vieux trépan',subtitle:'Ancien équipement de forage',signatureLabel:'Objet historique',
       stageLabels:{found:'Objet historique'},processLabels:{},
       facts:{found:'Les outils de forage ont transformé l’exploitation de la roche dure en accélérant le perçage des trous destinés au dynamitage et à l’excavation.'}
+    },
+    scheelite:{
+      name:'Scheelite',subtitle:'Minerai de tungstène → Tungstène',signatureLabel:'Tungstate de calcium',
+      stageLabels:{ore:'Minerai de scheelite',refined:'Tungstène'},processLabels:{ore:'Raffiner en tungstène'},
+      facts:{
+        ore:'La scheelite est un tungstate de calcium et un important minerai de tungstène. Beaucoup de spécimens fluorescent en bleu-blanc sous une lumière ultraviolette à ondes courtes.',
+        refined:'Le tungstène possède le point de fusion le plus élevé de tous les métaux purs et est recherché lorsqu’on a besoin de résistance à la chaleur et de grande dureté.'
+      },
+      mastery:'La fluorescence de la scheelite vient de ses groupes tungstate. De petites substitutions chimiques peuvent modifier la couleur et l’intensité de sa lueur.'
+    },
+    willemite:{
+      name:'Willemite',subtitle:'Silicate de zinc · Zn₂SiO₄',signatureLabel:'Silicate de zinc',
+      stageLabels:{raw:'Brute',tumbled:'Roulée',cut:'Taillée'},processLabels:{raw:'Polir au tonneau ×1',tumbled:'Tailler ×1'},
+      facts:{
+        raw:'La willemite est un silicate de zinc. Les spécimens contenant du manganèse peuvent produire une fluorescence verte extrêmement vive sous lumière ultraviolette.',
+        tumbled:'Le polissage peut révéler son éclat vitreux tout en conservant la chimie responsable de sa fluorescence.',
+        cut:'La willemite transparente est rare, mais certains cristaux convenables peuvent être facettés en pierres de collection très distinctives.'
+      },
+      mastery:'La willemite est devenue célèbre chez les collectionneurs de minéraux fluorescents parce que certains spécimens brillent d’un vert néon saisissant sous UV à ondes courtes.'
+    },
+    hackmanite:{
+      name:'Hackmanite',subtitle:'Variété ténébrescente de sodalite',signatureLabel:'Aluminosilicate du groupe de la sodalite',
+      stageLabels:{raw:'Brute',tumbled:'Roulée',cut:'Taillée'},processLabels:{raw:'Polir au tonneau ×1',tumbled:'Tailler ×1'},
+      facts:{
+        raw:'L’hackmanite est une variété de sodalite contenant du soufre, connue pour sa ténébrescence : la lumière ultraviolette peut temporairement intensifier ou modifier sa couleur.',
+        tumbled:'Une surface polie rend le changement de couleur réversible plus facile à voir, même si son intensité varie d’un spécimen à l’autre.',
+        cut:'L’hackmanite transparente peut être facettée, mais les collectionneurs apprécient souvent autant son comportement à la lumière que son apparence.'
+      },
+      mastery:'La ténébrescence est une forme réversible de photochromisme. Un spécimen d’hackmanite peut changer de couleur après une exposition aux UV, puis revenir graduellement à sa teinte d’origine sous une lumière ordinaire.'
+    },
+    apatite:{
+      name:'Apatite',subtitle:'Groupe de phosphates de calcium',signatureLabel:'Phosphate de calcium',
+      stageLabels:{raw:'Brute',tumbled:'Roulée',cut:'Taillée'},processLabels:{raw:'Polir au tonneau ×1',tumbled:'Tailler ×1'},
+      facts:{
+        raw:'L’apatite est un groupe de minéraux phosphatés qui existe en plusieurs couleurs. Elle définit la dureté 5 sur l’échelle de Mohs.',
+        tumbled:'L’apatite peut prendre un beau poli, mais sa dureté modérée fait qu’elle se raye plus facilement que le quartz.',
+        cut:'L’apatite transparente peut être facettée en gemmes très colorées, mais elle convient mieux à un port prudent qu’aux bagues de tous les jours.'
+      },
+      mastery:'Le nom apatite vient d’un mot grec signifiant « tromper », parce que ses cristaux peuvent ressembler à plusieurs autres minéraux.'
+    },
+    opal:{
+      name:'Opale',subtitle:'Minéraloïde de silice hydratée',signatureLabel:'Silice amorphe hydratée',
+      stageLabels:{raw:'Brute',tumbled:'Roulée',cut:'Taillée'},processLabels:{raw:'Polir au tonneau ×1',tumbled:'Tailler ×1'},
+      facts:{
+        raw:'L’opale est un minéraloïde plutôt qu’un véritable minéral parce qu’elle ne possède pas de structure cristalline régulière. Elle contient une quantité variable d’eau.',
+        tumbled:'Certaines opales montrent un jeu de couleurs produit par l’interaction de la lumière avec un arrangement ordonné de sphères microscopiques de silice.',
+        cut:'L’opale est généralement taillée en cabochon plutôt que facettée afin que ses effets de couleur puissent être vus sur une large surface courbe.'
+      },
+      mastery:'Toutes les opales ne montrent pas de jeu de couleurs. L’opale commune peut quand même être magnifique sans les éclats spectraux changeants associés à l’opale précieuse.'
+    },
+    belemnite:{
+      name:'Bélemnite',subtitle:'Céphalopode fossile apparenté aux calmars',signatureLabel:'Matière biologique fossilisée',
+      stageLabels:{found:'Spécimen fossile'},processLabels:{},
+      facts:{found:'Les bélemnites étaient des céphalopodes disparus apparentés aux calmars. Leurs rostres internes durs se fossilisent souvent en objets caractéristiques en forme de balle.'}
+    },
+    railSpike:{
+      name:'Vieux crampon de rail',subtitle:'Ancienne quincaillerie du transport minier',signatureLabel:'Objet historique',
+      stageLabels:{found:'Objet historique'},processLabels:{},
+      facts:{found:'Les réseaux de rails souterrains servaient à transporter le minerai, les stériles, les travailleurs et le matériel. Des pièces comme les crampons et les attaches maintenaient les voies en place.'}
     }
   };
 
@@ -621,6 +773,7 @@ const DURABILITY_LEVELS = [
   DEPTHS[2].name='Galeries basses';
   DEPTHS[3].name='Galerie profonde';
   DEPTHS[4].name='Filons cristallins';
+  DEPTHS[5].name='Zone lumineuse';
 
   DURABILITY_LEVELS[0].label='Pioche de base';
   DURABILITY_LEVELS[1].label='Manche renforcé';
@@ -635,14 +788,16 @@ const DURABILITY_LEVELS = [
 
   SCAN_CHARGE_LEVELS.forEach((x,i)=>x.label=`${x.uses} scan${x.uses===1?'':'s'} par paroi`);
 
-  WORKSHOP_LEVELS[0]={...WORKSHOP_LEVELS[0],name:'Atelier de base',next:'Atelier de précision',description:'Traite le quartz, l’améthyste, le minerai de fer et le minerai de cuivre.'};
-  WORKSHOP_LEVELS[1]={...WORKSHOP_LEVELS[1],name:'Atelier de précision',next:'Atelier lapidaire avancé',description:'Ajoute le grenat, la topaze, la citrine, la calcite, la fluorite, la cassitérite et d’autres matériaux intermédiaires.'};
-  WORKSHOP_LEVELS[2]={...WORKSHOP_LEVELS[2],name:'Atelier lapidaire avancé',next:'Atelier lapidaire maître',description:'Peut traiter l’aigue-marine, le saphir, le quartz rose, la malachite, la galène et la sphalérite.'};
-  WORKSHOP_LEVELS[3]={...WORKSHOP_LEVELS[3],name:'Atelier lapidaire maître',description:'Traite le rubis et l’émeraude. Le traitement reste gratuit.'};
+  WORKSHOP_LEVELS[0]={...WORKSHOP_LEVELS[0],name:'Atelier de base',next:'Atelier de précision',description:'Traite tes premiers minéraux et minerais transformables.'};
+  WORKSHOP_LEVELS[1]={...WORKSHOP_LEVELS[1],name:'Atelier de précision',next:'Atelier lapidaire avancé',description:'Ajoute la prise en charge d’un plus grand éventail de minéraux et minerais de milieu de partie.'};
+  WORKSHOP_LEVELS[2]={...WORKSHOP_LEVELS[2],name:'Atelier lapidaire avancé',next:'Atelier lapidaire maître',description:'Traite des gemmes plus résistantes et des minerais métallifères plus profonds.'};
+  WORKSHOP_LEVELS[3]={...WORKSHOP_LEVELS[3],name:'Atelier lapidaire maître',next:'Atelier lapidaire spécialisé',description:'Traite des gemmes exigeantes des zones profondes et prépare l’atelier aux matériaux inhabituels.'};
+  WORKSHOP_LEVELS[4]={...WORKSHOP_LEVELS[4],name:'Atelier lapidaire spécialisé',description:'Traite les matériaux des zones actuellement les plus profondes. Le traitement reste gratuit.'};
 
-  DEPTH_UPGRADES[2].description='Débloque la profondeur 2 : les Galeries basses, avec grenat, topaze, pyrite et de nouveaux fossiles.';
-  DEPTH_UPGRADES[3].description='Débloque la profondeur 3 : la Galerie profonde, avec de nouvelles variétés de quartz, fluorite, béryl, corindon, minerai d’étain et objets historiques plus profonds.';
-  DEPTH_UPGRADES[4].description='Débloque la profondeur 4 : les Filons cristallins, avec rubis, émeraude, quartz rose, malachite, minerais de plomb et de zinc, plus de nouveaux fossiles et artefacts.';
+  DEPTH_UPGRADES[2].description='Débloque la profondeur 2 : les Galeries basses, avec de nouvelles gemmes, des minéraux métalliques et davantage de fossiles à trouver.';
+  DEPTH_UPGRADES[3].description='Débloque la profondeur 3 : la Galerie profonde, avec de nouvelles familles cristallines, des minéraux colorés, un autre minerai métallifère et des traces historiques plus profondes.';
+  DEPTH_UPGRADES[4].description='Débloque la profondeur 4 : les Filons cristallins, avec des gemmes de grande qualité, de nouveaux minerais métallifères, des fossiles et des objets historiques.';
+  DEPTH_UPGRADES[5].description='Débloque la profondeur 5 : la Zone lumineuse, avec des minéraux fluorescents, un minerai inhabituel de métal lourd, un minéraloïde, des bélemnites et des traces plus profondes de l’histoire minière.';
 
   const FR_ACHIEVEMENTS = {
     firstCrunch:['Premier crac','Mine ta première case.'],
@@ -668,6 +823,8 @@ const DURABILITY_LEVELS = [
     shinyGoblin:['Gobelin à brillants','Trouve 100 spécimens au total.'],
     fullCoverage:['Large couverture','Scanne au moins la moitié d’une paroi rocheuse.'],
     allThatGlitters:['Tout ce qui brille','Maîtrise la citrine, la topaze et la pyrite.'],
+    glowUp:['Coup d’éclat','Observe un spécimen fluorescent du musée sous UV.'],
+    glowShow:['Le spectacle fluorescent','Aie cinq matériaux fluorescents différents représentés au musée.'],
     rockGoCrunch:['Rock Go Crunch','Tu te souvenais de l’ancien nom.']
   };
   ACHIEVEMENTS.forEach(a=>{if(FR_ACHIEVEMENTS[a.id]){a.name=FR_ACHIEVEMENTS[a.id][0];a.description=FR_ACHIEVEMENTS[a.id][1];}});
@@ -675,21 +832,23 @@ const DURABILITY_LEVELS = [
   const emptyInventory = () => Object.fromEntries(Object.entries(MATERIALS).map(([k,m]) => [k,Object.fromEntries(m.stages.map(s => [s,0]))]));
   const emptyCollection = () => Object.fromEntries(Object.entries(MATERIALS).map(([k,m]) => [k,Object.fromEntries(m.stages.map(s => [s,false]))]));
   const emptyStats = () => Object.fromEntries(Object.keys(MATERIALS).map(k => [k,{found:0,sold:0,donated:0,processed:0,earned:0}]));
+  const emptyDiscovery = () => Object.fromEntries(Object.keys(MATERIALS).map(k => [k,{discovered:false,depths:[]}]));
 
   const defaultState = () => ({
     credits:0,
     sound:true,
     unlockedDepth:1,
     currentDepth:1,
-    upgrades:{durability:0,surveying:0,workshop:0,scannerUses:0,metalDetector:false},
-    settings:{autoProcessByMaterial:{}},
+    upgrades:{durability:0,surveying:0,workshop:0,scannerUses:0,metalDetector:false,uvLamp:false},
+    settings:{autoProcessByMaterial:{},museumUv:false},
     inventory:emptyInventory(),
     collection:emptyCollection(),
     stats:emptyStats(),
+    discovery:emptyDiscovery(),
     achievements:{},
     meta:{
       tilesMined:0,scansUsed:0,doubleScans:0,anomalyFinds:0,metalSweeps:0,metalSignalFinds:0,
-      facesFinished:0,lastSwingFinds:0,sellAllUses:0,fullSurveyFaces:0,taglineTaps:0
+      facesFinished:0,lastSwingFinds:0,sellAllUses:0,fullSurveyFaces:0,taglineTaps:0,uvViews:0
     },
     face:null
   });
@@ -704,10 +863,11 @@ const DURABILITY_LEVELS = [
   const $ = id => document.getElementById(id);
   const els = {
     depthName:$('depthName'), depthNumber:$('depthNumber'), durability:$('durability'), maxDurability:$('maxDurability'), durabilityMeter:$('durabilityMeter'),
-    surveyLevel:$('surveyLevel'), scanUseSummary:$('scanUseSummary'), mineBalance:$('mineBalance'), depthSelector:$('depthSelector'), surveyTitle:$('surveyTitle'), surveyReport:$('surveyReport'), scanButton:$('scanButton'),
-    detectorTitle:$('detectorTitle'), detectorReport:$('detectorReport'), metalDetectorButton:$('metalDetectorButton'),
+    surveyLevel:$('surveyLevel'), scanUseSummary:$('scanUseSummary'), mineBalance:$('mineBalance'), depthSelector:$('depthSelector'), scanButton:$('scanButton'), scanButtonStatus:$('scanButtonStatus'),
+    metalDetectorButton:$('metalDetectorButton'), detectorButtonStatus:$('detectorButtonStatus'),
     mineBoard:$('mineBoard'), faceFinds:$('faceFinds'), newFaceButton:$('newFaceButton'), surfaceButton:$('surfaceButton'), mineMessage:$('mineMessage'),
     workbenchList:$('workbenchList'), masteredSellValue:$('masteredSellValue'), sellAllMasteredButton:$('sellAllMasteredButton'), museumWings:$('museumWings'), museumCount:$('museumCount'), museumMeter:$('museumMeter'),
+    museumLighting:$('museumLighting'), normalLightButton:$('normalLightButton'), uvLightButton:$('uvLightButton'),
     achievementGrid:$('achievementGrid'), achievementCount:$('achievementCount'), achievementMeter:$('achievementMeter'),
     shopBalance:$('shopBalance'), upgradeList:$('upgradeList'), soundToggle:$('soundToggle'), resetButton:$('resetButton'), toast:$('toast'),
     mobileMineHud:$('mobileMineHud'), mobileDurability:$('mobileDurability'), mobileScans:$('mobileScans'),
@@ -731,6 +891,8 @@ const DURABILITY_LEVELS = [
     els.surfaceButton.addEventListener('click',startNewFace);
     els.scanButton.addEventListener('click',toggleScanMode);
     els.metalDetectorButton.addEventListener('click',useMetalDetector);
+    els.normalLightButton.addEventListener('click',()=>setMuseumLighting(false));
+    els.uvLightButton.addEventListener('click',()=>setMuseumLighting(true));
     els.sellAllMasteredButton.addEventListener('click',sellAllMastered);
     els.soundToggle.addEventListener('click',() => {state.sound=!state.sound;saveState();renderSoundButton();if(state.sound)playTone('soft');});
     els.resetButton.addEventListener('click',resetGame);
@@ -754,6 +916,7 @@ const DURABILITY_LEVELS = [
         inventory:fresh.inventory,
         collection:fresh.collection,
         stats:fresh.stats,
+        discovery:fresh.discovery,
         achievements:{...(parsed.achievements||{})},
         meta:{...fresh.meta,...(parsed.meta||{})}
       };
@@ -764,6 +927,21 @@ const DURABILITY_LEVELS = [
           merged.collection[k][stage] = parsed.collection?.[k]?.[stage] ?? false;
         });
         merged.stats[k] = {...fresh.stats[k],...(parsed.stats?.[k]||{})};
+
+        const priorDiscovery=parsed.discovery?.[k];
+        const hasHistoricalEvidence=(merged.stats[k].found||0)>0 || (merged.stats[k].sold||0)>0 || (merged.stats[k].donated||0)>0 || (merged.stats[k].processed||0)>0 || m.stages.some(stage=>(merged.inventory[k][stage]||0)>0 || !!merged.collection[k][stage]);
+        const discovered=!!priorDiscovery?.discovered || hasHistoricalEvidence;
+        let depths=Array.isArray(priorDiscovery?.depths)?priorDiscovery.depths.map(Number).filter(d=>DEPTHS[d]&&d<=merged.unlockedDepth):[];
+
+        // Beta 1.2.2 begins tracking where each discovery was actually encountered.
+        // Older saves did not store that history, so seed useful known locations for
+        // already-discovered items from the depths the old save had unlocked.
+        if(discovered && !depths.length){
+          const currentFaceSawIt=parsed.face?.finds?.[k]>0 ? Number(parsed.face?.depth||parsed.currentDepth||1) : null;
+          if(currentFaceSawIt && DEPTHS[currentFaceSawIt])depths=[currentFaceSawIt];
+          else depths=spawnDepthsFor(k).filter(d=>d<=Math.max(1,Math.min(5,merged.unlockedDepth||1)));
+        }
+        merged.discovery[k]={discovered,depths:[...new Set(depths)].sort((a,b)=>a-b)};
       });
 
       // v2.1 migration: if global automation was on, keep it on for materials
@@ -776,13 +954,15 @@ const DURABILITY_LEVELS = [
         });
       }
 
-      merged.unlockedDepth = Math.max(1,Math.min(4,merged.unlockedDepth||1));
+      merged.unlockedDepth = Math.max(1,Math.min(5,merged.unlockedDepth||1));
       merged.currentDepth = Math.max(1,Math.min(merged.unlockedDepth,merged.currentDepth||1));
       merged.upgrades.workshop = Math.max(0,Math.min(WORKSHOP_LEVELS.length-1,merged.upgrades.workshop||0));
       merged.upgrades.scannerUses = Math.max(0,Math.min(SCAN_CHARGE_LEVELS.length-1,merged.upgrades.scannerUses||0));
       merged.upgrades.surveying = Math.max(0,Math.min(SURVEY_LEVELS.length-1,merged.upgrades.surveying||0));
       merged.upgrades.durability = Math.max(0,Math.min(DURABILITY_LEVELS.length-1,merged.upgrades.durability||0));
       merged.upgrades.metalDetector = !!merged.upgrades.metalDetector;
+      merged.upgrades.uvLamp = !!merged.upgrades.uvLamp;
+      merged.settings.museumUv = !!merged.settings.museumUv && merged.upgrades.uvLamp;
 
       return merged;
     }catch{
@@ -795,6 +975,36 @@ const DURABILITY_LEVELS = [
   function randInt(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
   function capitalize(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
   function totalInventory(k){ return Object.values(state.inventory[k]||{}).reduce((a,n)=>a+n,0); }
+  function spawnDepthsFor(k){
+    return Object.entries(DEPTHS).filter(([,cfg])=>Object.prototype.hasOwnProperty.call(cfg.materials||{},k) || (cfg.sideFinds||[]).some(x=>x.key===k)).map(([d])=>Number(d));
+  }
+  function isDiscovered(k){ return !!state.discovery?.[k]?.discovered || (state.stats?.[k]?.found||0)>0; }
+  function shouldObscureIdentity(k){
+    const family=MATERIALS[k]?.family;
+    return !isDiscovered(k) && ['mineral','ore','artifact'].includes(family);
+  }
+  function discoveredDepths(k){ return [...new Set((state.discovery?.[k]?.depths||[]).map(Number).filter(d=>DEPTHS[d]))].sort((a,b)=>a-b); }
+  function depthKnowledgeText(k){
+    const depths=discoveredDepths(k);
+    if(!depths.length)return 'Profondeur non enregistrée';
+    const prefix=depths.length===1?'Profondeur':'Profondeurs';
+    return `${prefix} ${depths.join(', ')}`;
+  }
+  function maskUndiscoveredNames(text){
+    let out=String(text||'');
+    Object.entries(MATERIALS).forEach(([k,m])=>{
+      if(!shouldObscureIdentity(k))return;
+      const names=[m.name];
+      Object.values(m.stageLabels||{}).forEach(label=>{
+        if(/^[A-Z][A-Za-z -]+$/.test(label) && !['Raw','Tumbled','Cut','Polished','Natural specimen'].includes(label))names.push(label);
+      });
+      names.sort((a,b)=>b.length-a.length).forEach(name=>{
+        if(!name)return;
+        out=out.replace(new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi'),'???');
+      });
+    });
+    return out;
+  }
   function isBulkSellEligible(k){
     const m=MATERIALS[k];
     return (m.family==='mineral'||m.family==='ore') && isMastered(k);
@@ -817,6 +1027,9 @@ const DURABILITY_LEVELS = [
   function totalFound(){ return Object.values(state.stats).reduce((sum,x)=>sum+(x.found||0),0); }
   function countCollectedFamily(family){
     return Object.entries(MATERIALS).filter(([,m])=>m.family===family).reduce((sum,[k,m])=>sum+m.stages.filter(stage=>state.collection[k]?.[stage]).length,0);
+  }
+  function countCollectedUvMaterials(){
+    return Object.keys(UV_CLASSES).filter(k=>MATERIALS[k]?.stages.some(stage=>state.collection[k]?.[stage])).length;
   }
   function isMetalTarget(k){ return !!MATERIALS[k]?.metalDetectable; }
 
@@ -1002,7 +1215,7 @@ const DURABILITY_LEVELS = [
     checkAchievements();
     saveState();
     playTone('soft');
-    setMineMessage('⌁','Scan terminé.',results.length?results[0].plain:'Aucune signature importante détectée.');
+    setMineMessage('⌁','Scan terminé.',results.length?results.map(r=>r.plain).join(' · '):'Aucune signature importante détectée.');
     renderMine();
   }
 
@@ -1101,7 +1314,8 @@ const DURABILITY_LEVELS = [
       });
       [...groups.entries()].sort((a,b)=>b[1].count-a[1].count).forEach(([key,g])=>{
         const strength=signalStrength(g.count);
-        results.push({html:`<strong>${strength} ${MATERIALS[key].name}</strong> · ${depositPattern(g.types)}`,plain:`${strength} ${MATERIALS[key].name} · ${depositPattern(g.types)}`});
+        const identified=isDiscovered(key)?MATERIALS[key].name:'Minéral inconnu';
+        results.push({html:`<strong>${strength} ${identified}</strong> · ${depositPattern(g.types)}`,plain:`${strength} ${identified} · ${depositPattern(g.types)}`});
       });
       const fossilCount=side.filter(t=>MATERIALS[t.material].family==='fossil').length;
       const artifactCount=side.filter(t=>MATERIALS[t.material].family==='artifact').length;
@@ -1154,6 +1368,11 @@ const DURABILITY_LEVELS = [
     const m=MATERIALS[k],stage=m.stages[0];
     state.inventory[k][stage]++;
     state.stats[k].found++;
+    if(!state.discovery)state.discovery=emptyDiscovery();
+    if(!state.discovery[k])state.discovery[k]={discovered:false,depths:[]};
+    state.discovery[k].discovered=true;
+    if(!state.discovery[k].depths.includes(state.currentDepth))state.discovery[k].depths.push(state.currentDepth);
+    state.discovery[k].depths.sort((a,b)=>a-b);
     if(canAutoProcess(k) && state.settings.autoProcessByMaterial[k])autoProcessOne(k);
   }
 
@@ -1196,7 +1415,7 @@ const DURABILITY_LEVELS = [
       pyrite:'Pyrite. Métallique, couleur laiton, et absolument pas de l’or raté.',
       citrine:'Citrine : du quartz aux tons chauds de la Galerie profonde.',
       calcite:'Calcite. Commune, importante et bien plus tendre que le quartz.',
-      fluorite:'Fluorite. Cristaux cubiques, couleurs folles et future vedette de la lampe UV.',
+      fluorite:'Fluorite. Cristaux cubiques, couleurs folles et excellente vedette sous la lampe UV.',
       aquamarine:'Aigue-marine : béryl bleu-vert. Il faudra du bon équipement pour la travailler.',
       sapphire:'Saphir : du corindon gemme, parmi les gemmes courantes les plus dures.',
       roseQuartz:'Quartz rose : encore du quartz, mais cette fois en rose.',
@@ -1206,15 +1425,22 @@ const DURABILITY_LEVELS = [
       cassiterite:'Cassitérite : le principal minerai d’étain.',
       galena:'Galène : minerai de plomb dense et métallique qui aime former des cubes.',
       sphalerite:'Sphalérite : le principal minerai de zinc.',
+      scheelite:'Scheelite : minerai de tungstène avec une fameuse surprise bleu-blanc sous UV.',
+      willemite:'Willemite. Sous UV, certains spécimens brillent d’un vert presque absurde; fluorescence ne veut pas dire radioactivité.',
+      hackmanite:'Hackmanite : une cousine de la sodalite qui peut temporairement changer de couleur après une exposition aux UV.',
+      apatite:'Apatite. Dureté 5 sur l’échelle de Mohs, et très douée pour se faire passer pour d’autres minéraux.',
+      opal:'Opale : silice hydratée, techniquement un minéraloïde plutôt qu’un véritable minéral.',
       trilobite:'Un fossile! L’aile des fossiles aimerait te parler.',
       ammonite:'Une ammonite! Un fossile en spirale venu d’une mer ancienne.',
       crinoidStem:'Une tige de crinoïde fossile : un petit morceau d’un ancien animal marin.',
       brachiopod:'Un brachiopode fossile. Ça ressemble à une palourde, mais ce n’en est vraiment pas une.',
+      belemnite:'Un rostre de bélemnite : le fossile en forme de balle d’un animal disparu apparenté aux calmars.',
       miningTag:'Une ancienne plaquette de mineur. Quelqu’un travaillait ici bien avant toi.',
       miningLamp:'Une vieille lampe de mineur. Un morceau de l’histoire humaine de la mine a survécu ici.',
       surveyMarker:'Un repère d’arpentage usé. Quelqu’un a cartographié cet endroit bien avant toi.',
-      drillBit:'Un vieux trépan. L’exploitation de roche dure laisse du matériel derrière elle.'
-    })[k]||'Something interesting came out of the rock.';
+      drillBit:'Un vieux trépan. L’exploitation de roche dure laisse du matériel derrière elle.',
+      railSpike:'Un vieux crampon de rail du système de transport de la mine. Le détecteur a bien mérité son bip.'
+    })[k]||'Quelque chose d’intéressant est sorti de la roche.';
   }
 
   function setMineMessage(icon,title,body){
@@ -1250,65 +1476,32 @@ const DURABILITY_LEVELS = [
 
   function renderSurvey(){
     const level=state.upgrades.surveying,f=state.face;
-    els.surveyReport.innerHTML='';
     els.scanButton.classList.toggle('active',scanMode);
 
     if(level===0){
-      els.surveyTitle.textContent='Aucun scanner';
-      els.scanButton.textContent='Verrouillé';els.scanButton.disabled=true;
-      els.surveyReport.innerHTML='<span class="survey-pill">La mine te donne quand même quelques faibles indices visuels. Améliore le scanner pour analyser des zones 3×3.</span>';
+      els.scanButton.disabled=true;
+      els.scanButton.querySelector('strong').textContent='Scanner la zone';
+      els.scanButtonStatus.textContent='Verrouillé';
       return;
     }
 
     els.scanButton.disabled=f.scanUsesRemaining<=0;
-    els.scanButton.textContent=scanMode?'Annuler':(f.scanUsesRemaining>0?'Scanner la zone':'Aucun scan');
-
-    if(scanMode){
-      els.surveyTitle.textContent=`Touche une case · ${f.scanUsesRemaining} scan${f.scanUsesRemaining===1?'':'s'} restant${f.scanUsesRemaining===1?'':'s'}`;
-      els.surveyReport.innerHTML='<span class="survey-pill">Les cases scannées restent marquées. Scanne la même zone deux fois et une case occupée cachée peut montrer une légère ombre de densité.</span>';
-      return;
-    }
-
-    els.surveyTitle.textContent=`${SURVEY_LEVELS[level].name} · ${f.scanUsesRemaining}/${currentMaxScans()} scans restants`;
-
-    if(!f.lastScan){
-      els.surveyReport.innerHTML=`<span class="survey-pill">${level<3?'Les premiers niveaux du scanner indiquent la chimie, pas le nom exact des gemmes.':'Cet analyseur peut identifier les minéraux exacts et les signatures inhabituelles.'}</span><span class="survey-pill">Toutes les cases sondées restent marquées pendant toute la paroi.</span>`;
-      return;
-    }
-
-    f.lastScan.results.forEach(result=>{
-      const line=document.createElement('div');line.className='scan-result-line';line.innerHTML=result.html;els.surveyReport.appendChild(line);
-    });
-    const overlapCount=f.lastScan.indices.filter(i=>(f.scanCounts[i]||0)>=2).length;
-    if(overlapCount){
-      const line=document.createElement('div');line.className='scan-result-line subtle';line.textContent=`${overlapCount} case${overlapCount===1?'':'s'} de ce passage ${overlapCount===1?'a':'ont'} maintenant été scannée${overlapCount===1?'':'s'} au moins deux fois. Surveille les très faibles ombres de densité.`;els.surveyReport.appendChild(line);
-    }
+    els.scanButton.querySelector('strong').textContent=scanMode?'Annuler le scan':'Scanner la zone';
+    els.scanButtonStatus.textContent=scanMode?`Touche une case · ${f.scanUsesRemaining} restant${f.scanUsesRemaining===1?'':'s'}`:`${f.scanUsesRemaining}/${currentMaxScans()} scans`;
   }
 
-
   function renderMetalDetector(){
-    if(!els.metalDetectorButton)return;
     if(!state.upgrades.metalDetector){
-      els.detectorTitle.textContent='Non débloqué';
-      els.metalDetectorButton.textContent='Verrouillé';
       els.metalDetectorButton.disabled=true;
-      els.detectorReport.innerHTML='<span class="survey-pill">Débloque le détecteur de métaux après avoir atteint les Galeries basses.</span>';
+      els.metalDetectorButton.querySelector('strong').textContent='Balayer la paroi';
+      els.detectorButtonStatus.textContent='Verrouillé';
       return;
     }
 
     const used=!!state.face.metalDetectorUsed;
-    els.detectorTitle.textContent=used?'Balayage terminé':'Un balayage complet disponible';
-    els.metalDetectorButton.textContent=used?'Utilisé':'Balayer la paroi';
     els.metalDetectorButton.disabled=used;
-
-    const zones=(state.face.metalSignalTiles||[]).length;
-    if(used){
-      els.detectorReport.innerHTML=zones
-        ?'<span class="survey-pill anomaly">Les grandes zones de signal métallique restent surlignées sur la paroi.</span>'
-        :'<span class="survey-pill">Aucune cible métallique forte n’a été détectée sur cette paroi.</span>';
-    }else{
-      els.detectorReport.innerHTML='<span class="survey-pill">Un balayage par paroi. Il peut suggérer où se trouvent des cibles conductrices ou métalliques, y compris certains objets historiques.</span>';
-    }
+    els.metalDetectorButton.querySelector('strong').textContent='Balayer la paroi';
+    els.detectorButtonStatus.textContent=used?'Utilisé sur cette paroi':'1/1 balayage';
   }
 
   function buildIcon(key,forTile=false,stage=null){
@@ -1320,8 +1513,15 @@ const DURABILITY_LEVELS = [
     if(!forTile&&stage==='refined'&&key==='cassiterite'){span.classList.remove('cassiterite');span.classList.add('tin');}
     if(!forTile&&stage==='refined'&&key==='galena'){span.classList.remove('galena');span.classList.add('lead');}
     if(!forTile&&stage==='refined'&&key==='sphalerite'){span.classList.remove('sphalerite');span.classList.add('zinc');}
+    if(!forTile&&stage==='refined'&&key==='scheelite'){span.classList.remove('scheelite');span.classList.add('tungsten');}
     if(forTile&&m.family==='mineral')span.classList.add('gem');
     if(forTile&&m.family==='ore')span.classList.add('ore');
+    if(SPARKLE_KEYS.has(key)){
+      span.classList.add('sparkle-gem');
+      const seed=[...`${key}-${stage||'raw'}-${forTile?'tile':'ui'}`].reduce((n,ch)=>n+ch.charCodeAt(0),0)%7;
+      span.style.setProperty('--sparkle-delay',`${-seed}.2s`);
+    }
+    if(UV_CLASSES[key])span.classList.add('uv-reactive',UV_CLASSES[key]);
     if(m.iconText)span.textContent=m.iconText;
     return span;
   }
@@ -1365,8 +1565,14 @@ const DURABILITY_LEVELS = [
   }
 
   function renderFaceFinds(){
-    const list=Object.entries(state.face.finds).filter(([,n])=>n>0).map(([k,n])=>`${n} ${MATERIALS[k].name}`);
-    els.faceFinds.textContent=list.length?list.join(' · '):'Rien pour l’instant';
+    const list=Object.entries(state.face.finds).filter(([,n])=>n>0);
+    els.faceFinds.innerHTML='';
+    if(!list.length){
+      const empty=document.createElement('span');empty.className='face-find-empty';empty.textContent='Rien pour l’instant';els.faceFinds.appendChild(empty);return;
+    }
+    list.forEach(([k,n])=>{
+      const pill=document.createElement('span');pill.className='face-find-pill';pill.textContent=`${MATERIALS[k].name} ×${n}`;els.faceFinds.appendChild(pill);
+    });
   }
 
   function renderMobileHud(){
@@ -1386,7 +1592,12 @@ const DURABILITY_LEVELS = [
     }
 
     els.workbenchList.innerHTML='';
-    Object.entries(MATERIALS).forEach(([k,m])=>{
+    const discoveredEntries=Object.entries(MATERIALS).filter(([k])=>isDiscovered(k));
+    if(!discoveredEntries.length){
+      els.workbenchList.innerHTML='<div class="workbench-empty"><strong>Ton carnet de terrain est vide.</strong><p>Trouve ton premier spécimen dans la mine et sa fiche apparaîtra ici.</p></div>';
+      return;
+    }
+    discoveredEntries.forEach(([k,m])=>{
       const stock=totalInventory(k),mastered=isMastered(k);
       const card=document.createElement('article');
       card.className=`workbench-card ${openWorkbenchKey===k?'open':''} ${stock>0?'has-stock':''} ${mastered?'mastered':''}`;
@@ -1403,7 +1614,7 @@ const DURABILITY_LEVELS = [
       toggle.appendChild(buildIcon(k));
 
       const main=document.createElement('div');main.className='accordion-main';
-      main.innerHTML=`<h3>${m.name}</h3><div class="summary-chips">${m.stages.map(s=>`<span class="summary-chip">${m.stageLabels[s]} ${state.inventory[k][s]} · ${formatMoney(m.prices[s])}</span>`).join('')}</div>`;
+      main.innerHTML=`<h3>${m.name}</h3><div class="material-depths"><span>⌖</span> Trouvé à : <strong>${depthKnowledgeText(k)}</strong></div><div class="summary-chips">${m.stages.map(s=>`<span class="summary-chip">${m.stageLabels[s]} ${state.inventory[k][s]} · ${formatMoney(m.prices[s])}</span>`).join('')}</div>`;
       toggle.appendChild(main);
 
       const chev=document.createElement('span');chev.className='chevron';chev.textContent='⌄';toggle.appendChild(chev);
@@ -1511,8 +1722,25 @@ const DURABILITY_LEVELS = [
     return !!m.mastery && m.stages.every(stage=>state.collection[k][stage]);
   }
 
+  function setMuseumLighting(useUv){
+    if(useUv&&!state.upgrades.uvLamp)return;
+    const switchingOn=!!useUv&&!state.settings.museumUv;
+    state.settings.museumUv=!!useUv;
+    if(switchingOn)state.meta.uvViews=(state.meta.uvViews||0)+1;
+    checkAchievements();
+    saveState();
+    renderMuseum();
+    if(useUv)playTone('soft');
+  }
+
   function renderMuseum(){
     els.museumWings.innerHTML='';
+    const uvAvailable=!!state.upgrades.uvLamp;
+    els.museumLighting.classList.toggle('hidden',!uvAvailable);
+    if(!uvAvailable)state.settings.museumUv=false;
+    els.museumWings.classList.toggle('uv-mode',uvAvailable&&state.settings.museumUv);
+    els.normalLightButton.classList.toggle('active',!state.settings.museumUv);
+    els.uvLightButton.classList.toggle('active',!!state.settings.museumUv);
     let filledTotal=0;
     const total=Object.values(MATERIALS).reduce((a,m)=>a+m.stages.length,0);
 
@@ -1527,21 +1755,25 @@ const DURABILITY_LEVELS = [
 
       pairs.forEach(([k,m])=>{
         const group=document.createElement('div');
-        const gf=m.stages.filter(s=>state.collection[k][s]).length,mastered=isMastered(k);
-        group.className=`museum-group ${mastered?'mastered':''}`;
-        group.innerHTML=`<div class="museum-group-title"><strong>${m.name}</strong><span>${gf} / ${m.stages.length}</span></div>`;
+        const gf=m.stages.filter(s=>state.collection[k][s]).length,mastered=isMastered(k),obscured=shouldObscureIdentity(k);
+        group.className=`museum-group ${mastered?'mastered':''} ${obscured?'undiscovered':''}`;
+        group.innerHTML=`<div class="museum-group-title"><strong>${obscured?'???':m.name}</strong><span>${obscured?'Non identifié':`${gf} / ${m.stages.length}`}</span></div>`;
 
         const grid=document.createElement('div');
         grid.className=`museum-specimen-grid ${m.stages.length>=3?'three':m.stages.length===2?'two':'one'}`;
 
         m.stages.forEach(stage=>{
           const filled=state.collection[k][stage];
-          const column=document.createElement('div');column.className=`museum-specimen-column ${filled?'filled':''}`;
+          const column=document.createElement('div');column.className=`museum-specimen-column ${filled?'filled':''} ${obscured?'unknown-specimen':''}`;
           const specimen=document.createElement('div');specimen.className='museum-specimen';
-          const visual=document.createElement('div');visual.className='slot-visual';visual.appendChild(buildIcon(k,false,stage));specimen.appendChild(visual);
-          specimen.insertAdjacentHTML('beforeend',`<strong class="slot-stage">${m.stageLabels[stage]}</strong>${filled?'':'<span class="slot-state">Pas encore obtenu</span>'}`);
+          const visual=document.createElement('div');visual.className='slot-visual';
+          if(obscured){
+            const mystery=document.createElement('span');mystery.className='unknown-material-icon';mystery.textContent='?';visual.appendChild(mystery);
+          }else visual.appendChild(buildIcon(k,false,stage));
+          specimen.appendChild(visual);
+          specimen.insertAdjacentHTML('beforeend',obscured?'<strong class="slot-stage">Spécimen inconnu</strong><span class="slot-state">Non identifié</span>':`<strong class="slot-stage">${m.stageLabels[stage]}</strong>${filled?'':'<span class="slot-state">Pas encore obtenu</span>'}`);
           const fact=document.createElement('div');fact.className='specimen-fact-card';
-          fact.innerHTML=filled?`<p>${m.facts[stage]}</p>`:'<p class="locked-fact">Donne cette forme au musée pour débloquer son fait.</p>';
+          fact.innerHTML=obscured?'<p class="locked-fact">Trouve ce spécimen dans la mine pour l’identifier.</p>':filled?`<p>${m.facts[stage]}</p>`:'<p class="locked-fact">Donne cette forme au musée pour débloquer son fait.</p>';
           column.appendChild(specimen);column.appendChild(fact);grid.appendChild(column);
         });
 
@@ -1593,72 +1825,79 @@ const DURABILITY_LEVELS = [
     els.achievementMeter.style.width=`${unlocked/ACHIEVEMENTS.length*100}%`;
     els.achievementGrid.innerHTML='';
 
+    const featured=new Set(['sio2Enjoyer','familyResemblance','berylBuddies','metalhead','lastSwingLuck','fourFloorsDown','allThatGlitters','glowShow']);
+    const special=new Set(['rockGoCrunch']);
+
     ACHIEVEMENTS.forEach(a=>{
       const earned=!!state.achievements[a.id];
+      const tier=special.has(a.id)?'tier-special':featured.has(a.id)?'tier-featured':'tier-small';
       const card=document.createElement('article');
-      card.className=`achievement-card ${earned?'unlocked':'locked'} ${a.hidden&&!earned?'hidden-achievement':''}`;
+      card.className=`achievement-card ${tier} ${earned?'unlocked':'locked'} ${a.hidden&&!earned?'hidden-achievement':''}`;
       const name=a.hidden&&!earned?'???':a.name;
-      const desc=a.hidden&&!earned?'Un succès caché.':a.description;
-      card.innerHTML=`<div class="achievement-icon">${earned?a.icon:'?'}</div><div><strong>${name}</strong><p>${desc}</p>${earned?'<span class="achievement-state">Débloqué</span>':''}</div>`;
+      const desc=a.hidden&&!earned?'Un succès caché.':maskUndiscoveredNames(a.description);
+      card.innerHTML=`<div class="achievement-icon">${earned?a.icon:'?'}</div><div><strong>${name}</strong><p>${desc}</p></div>`;
       els.achievementGrid.appendChild(card);
     });
   }
 
   function renderUpgrades(){
     els.shopBalance.textContent=formatMoney(state.credits);els.upgradeList.innerHTML='';
-    [depthCard(),durabilityCard(),surveyCard(),scannerUsesCard(),metalDetectorCard(),workshopCard()].forEach(c=>els.upgradeList.appendChild(c));
+    [depthCard(),durabilityCard(),surveyCard(),scannerUsesCard(),metalDetectorCard(),uvLampCard(),workshopCard()].forEach(c=>els.upgradeList.appendChild(c));
   }
 
-  function upgradeCard({icon,eyebrow,title,description,current,cost,label,disabled,onClick}){
+  function upgradeCard({icon,eyebrow,title,description,current,cost,label,disabled,onClick,maxText=null}){
     const card=document.createElement('article');card.className='upgrade-card';
-    card.innerHTML=`<div class="upgrade-icon">${icon}</div><div class="upgrade-copy"><span class="status-label">${eyebrow}</span><h3>${title}</h3><p>${description}</p><span class="upgrade-current">${current}</span></div><div class="upgrade-action"><span class="price-tag">${cost===null?'MAX':formatMoney(cost)}</span><button class="primary-button" type="button" ${disabled?'disabled':''}>${label}</button></div>`;
-    const b=card.querySelector('button');if(!disabled&&onClick)b.addEventListener('click',onClick);return card;
+    const action=maxText
+      ?`<div class="upgrade-action"><span class="max-state">${maxText}</span></div>`
+      :`<div class="upgrade-action"><span class="price-tag">${formatMoney(cost)}</span><button class="primary-button" type="button" ${disabled?'disabled':''}>${label}</button></div>`;
+    card.innerHTML=`<div class="upgrade-icon">${icon}</div><div class="upgrade-copy"><span class="status-label">${eyebrow}</span><h3>${title}</h3><p>${description}</p><span class="upgrade-current">${current}</span></div>${action}`;
+    const b=card.querySelector('button');if(b&&!disabled&&onClick)b.addEventListener('click',onClick);return card;
   }
 
   function depthCard(){
     const nextDepth=state.unlockedDepth+1;
-    if(nextDepth>4)return upgradeCard({icon:'🪜',eyebrow:'Profondeur de la mine',title:'Filons cristallins débloqués',description:'Les quatre profondeurs de la Bêta 1.1 sont disponibles.',current:'Profondeurs 1 à 4 disponibles',cost:null,label:'Maximum bêta',disabled:true});
+    if(nextDepth>5)return upgradeCard({icon:'🪜',eyebrow:'Profondeur de la mine',title:'Zone lumineuse débloquée',description:'Les cinq profondeurs actuelles sont disponibles.',current:'Profondeurs 1 à 5 disponibles',maxText:'MAX (d’autres arrivent bientôt... 👀)'});
     const up=DEPTH_UPGRADES[nextDepth];
     return upgradeCard({icon:'🪜',eyebrow:'Profondeur de la mine',title:`Débloquer la profondeur ${nextDepth}`,description:up.description,current:`Actuel : profondeurs 1 à ${state.unlockedDepth}`,cost:up.cost,label:'Descendre',disabled:state.credits<up.cost,onClick:buyDepth});
   }
 
   function durabilityCard(){
     const i=state.upgrades.durability,cur=DURABILITY_LEVELS[i],max=cur.cost===null,next=max?null:DURABILITY_LEVELS[i+1];
-    return upgradeCard({icon:'⛏️',eyebrow:'Durabilité de la pioche',title:max?cur.label:`${cur.swings} → ${next.swings} coups`,description:max?'La pioche la plus solide de cette bêta.':'Plus de coups par paroi. Aucune énergie ni minuterie de recharge.',current:`Actuel : ${cur.label} · ${cur.swings} coups`,cost:cur.cost,label:max?'Maximum bêta':'Améliorer la pioche',disabled:max||state.credits<cur.cost,onClick:buyDurability});
+    if(max)return upgradeCard({icon:'⛏️',eyebrow:'Durabilité de la pioche',title:cur.label,description:'La pioche régulière la plus solide actuellement nécessaire pour ces parois.',current:`Actuel : ${cur.label} · ${cur.swings} coups`,maxText:'MAX (d’autres arrivent bientôt... 👀)'});
+    return upgradeCard({icon:'⛏️',eyebrow:'Durabilité de la pioche',title:`${cur.swings} → ${next.swings} coups`,description:'Plus de coups par paroi. Aucune énergie ni minuterie de recharge.',current:`Actuel : ${cur.label} · ${cur.swings} coups`,cost:cur.cost,label:'Améliorer la pioche',disabled:state.credits<cur.cost,onClick:buyDurability});
   }
 
   function surveyCard(){
     const cur=SURVEY_LEVELS[state.upgrades.surveying],max=cur.cost===null;
-    return upgradeCard({icon:'⌁',eyebrow:'Analyse du scanner',title:max?cur.name:`Débloquer ${cur.next}`,description:cur.description,current:`Actuel : ${cur.name}`,cost:cur.cost,label:max?'Maximum bêta':'Améliorer le scanner',disabled:max||state.credits<cur.cost,onClick:buySurvey});
+    const mechanics='Le scanner cible une zone 3×3. Les cases sondées restent marquées pour toute la paroi, et scanner deux fois la même zone peut révéler une très faible ombre de densité générique sur les cases occupées.';
+    if(max)return upgradeCard({icon:'⌁',eyebrow:'Analyse du scanner',title:cur.name,description:`${mechanics} ${cur.description}`,current:`Actuel : ${cur.name}`,maxText:'MAX'});
+    return upgradeCard({icon:'⌁',eyebrow:'Analyse du scanner',title:`Débloquer ${cur.next}`,description:`${mechanics} ${cur.description}`,current:`Actuel : ${cur.name}`,cost:cur.cost,label:'Améliorer le scanner',disabled:state.credits<cur.cost,onClick:buySurvey});
   }
 
   function scannerUsesCard(){
     const cur=SCAN_CHARGE_LEVELS[state.upgrades.scannerUses],max=cur.cost===null,next=max?null:SCAN_CHARGE_LEVELS[state.upgrades.scannerUses+1],locked=state.upgrades.surveying===0;
-    return upgradeCard({
-      icon:'📡',eyebrow:'Charges du scanner',title:max?cur.label:`${cur.uses} → ${next.uses} scans par paroi`,
-      description:locked?'Débloque d’abord le scanner de terrain.':'Achète plus de scans par paroi. Les scans superposés réduisent la couverture, mais donnent des indices de position beaucoup plus forts.',
-      current:`Actuel : ${cur.uses} scan${cur.uses===1?'':'s'} par paroi`,cost:max?null:cur.cost,label:max?'Maximum bêta':(locked?'Scanner verrouillé':'Ajouter un scan'),
-      disabled:max||locked||state.credits<cur.cost,onClick:buyScannerUse
-    });
+    if(max)return upgradeCard({icon:'📡',eyebrow:'Charges du scanner',title:cur.label,description:'Chaque charge scanne une zone 3×3 choisie. Les charges se réinitialisent immédiatement avec chaque nouvelle paroi.',current:`Actuel : ${cur.uses} scans par paroi`,maxText:'MAX'});
+    return upgradeCard({icon:'📡',eyebrow:'Charges du scanner',title:`${cur.uses} → ${next.uses} scans par paroi`,description:locked?'Débloque d’abord le scanner de terrain.':'Ajoute un scan 3×3 de plus par paroi. Les charges se réinitialisent sur une nouvelle paroi; aucun temps de recharge réel.',current:`Actuel : ${cur.uses} scan${cur.uses===1?'':'s'} par paroi`,cost:cur.cost,label:locked?'Scanner verrouillé':'Ajouter un scan',disabled:locked||state.credits<cur.cost,onClick:buyScannerUse});
   }
 
-
   function metalDetectorCard(){
-    const owned=!!state.upgrades.metalDetector;
-    const depthReady=state.unlockedDepth>=2;
-    const cost=275;
-    return upgradeCard({
-      icon:'🧲',eyebrow:'Outil de prospection',title:owned?'Détecteur de métaux':'Débloquer le détecteur de métaux',
-      description:owned?'Un balayage complet par paroi révèle de larges zones de signal métallique.':'Balaye toute la paroi une fois et surligne des zones approximatives pouvant contenir des cibles métalliques ou des objets historiques.',
-      current:owned?'Actuel : détecteur de métaux équipé':(depthReady?'Disponible après avoir atteint les Galeries basses':'Atteins d’abord la profondeur 2'),
-      cost:owned?null:cost,label:owned?'Équipé':(depthReady?'Acheter le détecteur':'Profondeur 2 requise'),
-      disabled:owned||!depthReady||state.credits<cost,onClick:buyMetalDetector
-    });
+    const owned=!!state.upgrades.metalDetector,depthReady=state.unlockedDepth>=2,cost=275;
+    const description='Le détecteur balaie toute la paroi une seule fois. Il marque volontairement de grandes zones de signal imprécises pour les cibles métalliques ou conductrices, y compris certains objets historiques; il n’indique jamais une case exacte.';
+    if(owned)return upgradeCard({icon:'🧲',eyebrow:'Outil de prospection',title:'Détecteur de métaux',description,current:'Actuel : détecteur de métaux équipé',maxText:'MAX'});
+    return upgradeCard({icon:'🧲',eyebrow:'Outil de prospection',title:'Débloquer le détecteur de métaux',description,current:depthReady?'Disponible après avoir atteint les Galeries basses':'Atteins d’abord la profondeur 2',cost,label:depthReady?'Acheter le détecteur':'Profondeur 2 requise',disabled:!depthReady||state.credits<cost,onClick:buyMetalDetector});
+  }
+
+  function uvLampCard(){
+    const owned=!!state.upgrades.uvLamp,depthReady=state.unlockedDepth>=5,cost=950;
+    const description='Ajoute un mode d’éclairage Normal / UV pour tout le musée. Les spécimens fluorescents révèlent leur éclat sous UV tandis que la majorité de la collection reste sombre.';
+    if(owned)return upgradeCard({icon:'🔦',eyebrow:'Équipement du musée',title:'Lampe UV de fluorescence',description,current:'Actuel : éclairage UV installé au musée',maxText:'MAX'});
+    return upgradeCard({icon:'🔦',eyebrow:'Équipement du musée',title:'Débloquer la lampe UV de fluorescence',description,current:depthReady?'Disponible après avoir atteint la Zone lumineuse':'Atteins d’abord la profondeur 5',cost,label:depthReady?'Installer la lampe UV':'Profondeur 5 requise',disabled:!depthReady||state.credits<cost,onClick:buyUvLamp});
   }
 
   function workshopCard(){
     const i=state.upgrades.workshop,cur=WORKSHOP_LEVELS[i],max=cur.cost===null;
-    return upgradeCard({icon:'🛠️',eyebrow:'Équipement d’atelier',title:max?cur.name:`Débloquer ${cur.next}`,description:cur.description,current:`Actuel : ${cur.name}`,cost:cur.cost,label:max?'Maximum bêta':'Améliorer l’atelier',disabled:max||state.credits<cur.cost,onClick:buyWorkshop});
+    if(max)return upgradeCard({icon:'🛠️',eyebrow:'Équipement d’atelier',title:cur.name,description:cur.description,current:`Actuel : ${cur.name}`,maxText:'MAX (d’autres arrivent bientôt... 👀)'});
+    return upgradeCard({icon:'🛠️',eyebrow:'Équipement d’atelier',title:`Débloquer ${cur.next}`,description:cur.description,current:`Actuel : ${cur.name}`,cost:cur.cost,label:'Améliorer l’atelier',disabled:state.credits<cur.cost,onClick:buyWorkshop});
   }
 
   function buyDepth(){
@@ -1702,6 +1941,13 @@ const DURABILITY_LEVELS = [
     saveState();playTone('upgrade');renderAll();showToast('Détecteur de métaux débloqué.');
   }
 
+  function buyUvLamp(){
+    const cost=950;
+    if(state.upgrades.uvLamp||state.unlockedDepth<5||state.credits<cost)return;
+    state.credits-=cost;state.upgrades.uvLamp=true;
+    saveState();playTone('upgrade');renderAll();showToast('Lampe UV de fluorescence installée au musée.');
+  }
+
   function buyWorkshop(){
     const cur=WORKSHOP_LEVELS[state.upgrades.workshop];
     if(cur.cost===null||state.credits<cur.cost)return;
@@ -1710,9 +1956,9 @@ const DURABILITY_LEVELS = [
   }
 
   function resetGame(){
-    if(!window.confirm('Réinitialiser toute la progression de Cherche-cailloux Bêta 1.1?'))return;
+    if(!window.confirm('Réinitialiser toute la progression de Cherche-cailloux Bêta 1.2.2?'))return;
     localStorage.removeItem(SAVE_KEY);state=defaultState();state.face=generateFace(1);openWorkbenchKey=null;scanMode=false;
-    saveState();renderAll();showToast('Sauvegarde Bêta 1.1 réinitialisée.');
+    saveState();renderAll();showToast('Sauvegarde Bêta 1.2.2 réinitialisée.');
   }
 
   function renderSoundButton(){
@@ -1737,7 +1983,7 @@ const DURABILITY_LEVELS = [
       src.buffer=buffer;filter.type='lowpass';filter.frequency.value=520;gain.gain.setValueAtTime(.13,now);gain.gain.exponentialRampToValueAtTime(.001,now+.055);
       src.connect(filter).connect(gain).connect(ctx.destination);src.start(now);src.stop(now+.06);return;
     }
-    const base={quartz:440,amethyst:392,garnet:349,topaz:494,pyrite:554,citrine:466,calcite:415,fluorite:523,aquamarine:587,sapphire:622,roseQuartz:430,malachite:360,ruby:680,emerald:560,hematite:294,chalcopyrite:330,cassiterite:370,galena:250,sphalerite:315,trilobite:262,ammonite:277,crinoidStem:286,brachiopod:240,miningTag:247,miningLamp:220,surveyMarker:232,drillBit:205}[key]||440;
+    const base={quartz:440,amethyst:392,garnet:349,topaz:494,pyrite:554,citrine:466,calcite:415,fluorite:523,aquamarine:587,sapphire:622,roseQuartz:430,malachite:360,ruby:680,emerald:560,willemite:610,hackmanite:575,apatite:640,opal:720,hematite:294,chalcopyrite:330,cassiterite:370,galena:250,sphalerite:315,scheelite:405,trilobite:262,ammonite:277,crinoidStem:286,brachiopod:240,belemnite:255,miningTag:247,miningLamp:220,surveyMarker:232,drillBit:205,railSpike:198}[key]||440;
     const sets={gem:[base,base*1.25,base*1.5],process:[260,330],collection:[523,659,784],coin:[660,880],upgrade:[330,440,554,659],soft:[300]},freqs=sets[type]||sets.soft;
     freqs.forEach((freq,i)=>{
       const osc=ctx.createOscillator(),gain=ctx.createGain(),start=now+i*.05,duration=['upgrade','collection'].includes(type)?.17:.105;

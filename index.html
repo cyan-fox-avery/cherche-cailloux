@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#111416" />
-  <title>Cherche-cailloux — Bêta 1.1</title>
+  <title>Cherche-cailloux — Bêta 1.2.2</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
       <div>
-        <p class="eyebrow">BÊTA 1.1</p>
+        <p class="eyebrow">BÊTA 1.2.2</p>
         <h1 id="gameTitle">CHERCHE-CAILLOUX</h1>
         <p id="gameTagline" class="subtitle">ça fait crac.</p>
       </div>
@@ -33,41 +33,34 @@
             <button id="newFaceButton" class="secondary-button" type="button">Nouvelle paroi</button>
           </div>
 
-          <div id="depthSelector" class="depth-selector"></div>
-
-          <div class="survey-box scanner-box">
-            <div class="survey-heading scanner-heading">
-              <span class="survey-icon">⌁</span>
-              <div class="scanner-copy"><span class="status-label">Scanner de zone</span><strong id="surveyTitle">Aucun scanner</strong></div>
-              <button id="scanButton" class="secondary-button scan-button" type="button">Scanner la zone</button>
-            </div>
-            <div id="surveyReport" class="survey-report"></div>
+          <div class="depth-picker">
+            <span class="status-label">Choisir la profondeur</span>
+            <div id="depthSelector" class="depth-selector"></div>
           </div>
 
-          <div class="survey-box detector-box">
-            <div class="survey-heading detector-heading">
-              <span class="survey-icon">🧲</span>
-              <div class="scanner-copy"><span class="status-label">Détecteur de métaux</span><strong id="detectorTitle">Non débloqué</strong></div>
-              <button id="metalDetectorButton" class="secondary-button scan-button" type="button">Balayer la paroi</button>
-            </div>
-            <div id="detectorReport" class="survey-report"></div>
+          <div class="mine-feedback">
+            <div id="mineMessage" class="message-card mine-message-inline"><span class="message-icon">⛏️</span><div><strong>Ça fait crac.</strong><p>De faibles indices géologiques peuvent suggérer où commencer. Des scans répétés peuvent révéler une très légère anomalie sous la roche.</p></div></div>
+            <div class="face-find-strip"><span class="status-label">Trouvé sur cette paroi</span><div id="faceFinds" class="face-find-list"><span class="face-find-empty">Rien pour l’instant</span></div></div>
           </div>
 
-          <div id="mineBoard" class="mine-board" aria-label="10 by 10 mine grid"></div>
+          <div id="mineBoard" class="mine-board" aria-label="Grille minière 10 par 10"></div>
 
-          <div class="run-footer">
-            <div><span class="status-label">Trouvé ici</span><strong id="faceFinds">Rien pour l’instant</strong></div>
+          <div class="mine-tool-buttons" aria-label="Outils de prospection">
+            <button id="scanButton" class="mine-tool-button" type="button"><span class="tool-button-icon">⌁</span><span><strong>Scanner la zone</strong><small id="scanButtonStatus">Verrouillé</small></span></button>
+            <button id="metalDetectorButton" class="mine-tool-button" type="button"><span class="tool-button-icon">🧲</span><span><strong>Balayer la paroi</strong><small id="detectorButtonStatus">Verrouillé</small></span></button>
+          </div>
+
+          <div class="run-footer mine-actions">
+            <span class="status-note">Les outils se réinitialisent avec chaque nouvelle paroi.</span>
             <button id="surfaceButton" class="primary-button" type="button">Retour à la surface</button>
           </div>
         </div>
-
-        <div id="mineMessage" class="message-card"><span class="message-icon">⛏️</span><div><strong>Ça fait crac.</strong><p>De faibles indices géologiques peuvent suggérer où commencer. Des scans répétés peuvent révéler une très légère anomalie sous la roche.</p></div></div>
       </section>
 
       <section class="panel" data-panel="workbench">
         <div class="section-heading">
           <div><p class="eyebrow">ATELIER DE SURFACE</p><h2>Établi</h2></div>
-          <p>Une petite étincelle apparaît sur la fiche du matériau quand tu en as dans ton inventaire.</p>
+          <p>Ton carnet de terrain se remplit à mesure que tu découvres des spécimens. Chaque fiche connue indique les profondeurs où tu l’as rencontré.</p>
         </div>
         <div class="workbench-sell-bar">
           <div>
@@ -85,7 +78,14 @@
           <div><p class="eyebrow">LA COLLECTION</p><h2>Musée</h2></div>
           <p>Chaque spécimen garde sa propre fiche-info. Complète un ensemble pour débloquer son fait bonus et son automatisation.</p>
         </div>
-        <div class="collection-progress-card"><div><span class="status-label">Progression du musée</span><strong id="museumCount">0 / 58</strong></div><div class="big-meter"><span id="museumMeter"></span></div></div>
+        <div class="collection-progress-card"><div><span class="status-label">Progression du musée</span><strong id="museumCount">0 / 74</strong></div><div class="big-meter"><span id="museumMeter"></span></div></div>
+        <div id="museumLighting" class="museum-lighting hidden" aria-label="Contrôles d’éclairage du musée">
+          <div><span class="status-label">Éclairage du musée</span><strong>Lampe UV de fluorescence</strong></div>
+          <div class="lighting-toggle" role="group" aria-label="Choisir l’éclairage du musée">
+            <button id="normalLightButton" type="button" class="lighting-button active">Normal</button>
+            <button id="uvLightButton" type="button" class="lighting-button">UV</button>
+          </div>
+        </div>
         <div id="museumWings" class="museum-wings"></div>
       </section>
 
@@ -94,7 +94,7 @@
           <div><p class="eyebrow">BIZARRERIES ET JALONS</p><h2>Succès</h2></div>
           <p>Certains sont évidents. D’autres pas du tout. Le jeu te regarde.</p>
         </div>
-        <div class="collection-progress-card"><div><span class="status-label">Débloqués</span><strong id="achievementCount">0 / 24</strong></div><div class="big-meter"><span id="achievementMeter"></span></div></div>
+        <div class="collection-progress-card"><div><span class="status-label">Débloqués</span><strong id="achievementCount">0 / 26</strong></div><div class="big-meter"><span id="achievementMeter"></span></div></div>
         <div id="achievementGrid" class="achievement-grid"></div>
       </section>
 
@@ -102,8 +102,8 @@
         <div class="section-heading"><div><p class="eyebrow">ÉQUIPEMENT ET OPÉRATIONS</p><h2>Améliorations</h2></div><p>Le meilleur équipement se gagne en jouant. Rien ne coûte d’argent réel.</p></div>
         <div class="shop-balance"><span class="status-label">Solde actuel</span><strong id="shopBalance">0¢</strong></div>
         <div id="upgradeList" class="upgrade-list"></div>
-        <div class="design-note"><strong>Règle de jeu équitable</strong><p>Le traitement est gratuit. Les scans et la durabilité de la pioche se réinitialisent avec chaque nouvelle paroi. Aucun temps d’attente réel, aucune monnaie premium, aucun paiement pour sauter une étape.</p></div>
-        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.1</button>
+        <div class="design-note"><strong>Règle de jeu équitable</strong><p>Le traitement est gratuit. Les charges du scanner et la durabilité de la pioche se réinitialisent avec chaque nouvelle paroi. Aucun temps d’attente réel, aucune monnaie premium, aucun paiement pour sauter une étape.</p></div>
+        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.2.2</button>
       </section>
     </main>
 
