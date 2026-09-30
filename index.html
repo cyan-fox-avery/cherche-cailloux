@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111416" />
+  <title>Cherche-cailloux — Bêta 1.1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">BÊTA 1.1</p>
+        <h1 id="gameTitle">CHERCHE-CAILLOUX</h1>
+        <p id="gameTagline" class="subtitle">ça fait crac.</p>
+      </div>
+      <button id="soundToggle" class="icon-button" type="button" aria-label="Activer ou couper le son">🔊</button>
+    </header>
+
+    <main>
+      <section class="panel active" data-panel="mine">
+        <div class="status-grid">
+          <div class="status-card"><span class="status-label">Profondeur</span><strong id="depthName">Filon supérieur</strong><span id="depthNumber" class="status-note">Profondeur 1</span></div>
+          <div class="status-card"><span class="status-label">Durabilité de la pioche</span><strong><span id="durability">0</span>/<span id="maxDurability">0</span></strong><div class="meter"><span id="durabilityMeter"></span></div></div>
+          <div class="status-card"><span class="status-label">Scanner</span><strong id="surveyLevel">Aucun</strong><span id="scanUseSummary" class="status-note">verrouillé</span></div>
+          <div class="status-card"><span class="status-label">Solde</span><strong id="mineBalance">0¢</strong><span class="status-note">une seule monnaie</span></div>
+        </div>
+
+        <div class="mine-card">
+          <div class="mine-heading">
+            <div><h2>Paroi rocheuse</h2><p>Observe la roche, sonde les zones prometteuses, puis suis les filons que tu découvres.</p></div>
+            <button id="newFaceButton" class="secondary-button" type="button">Nouvelle paroi</button>
+          </div>
+
+          <div id="depthSelector" class="depth-selector"></div>
+
+          <div class="survey-box scanner-box">
+            <div class="survey-heading scanner-heading">
+              <span class="survey-icon">⌁</span>
+              <div class="scanner-copy"><span class="status-label">Scanner de zone</span><strong id="surveyTitle">Aucun scanner</strong></div>
+              <button id="scanButton" class="secondary-button scan-button" type="button">Scanner la zone</button>
+            </div>
+            <div id="surveyReport" class="survey-report"></div>
+          </div>
+
+          <div class="survey-box detector-box">
+            <div class="survey-heading detector-heading">
+              <span class="survey-icon">🧲</span>
+              <div class="scanner-copy"><span class="status-label">Détecteur de métaux</span><strong id="detectorTitle">Non débloqué</strong></div>
+              <button id="metalDetectorButton" class="secondary-button scan-button" type="button">Balayer la paroi</button>
+            </div>
+            <div id="detectorReport" class="survey-report"></div>
+          </div>
+
+          <div id="mineBoard" class="mine-board" aria-label="10 by 10 mine grid"></div>
+
+          <div class="run-footer">
+            <div><span class="status-label">Trouvé ici</span><strong id="faceFinds">Rien pour l’instant</strong></div>
+            <button id="surfaceButton" class="primary-button" type="button">Retour à la surface</button>
+          </div>
+        </div>
+
+        <div id="mineMessage" class="message-card"><span class="message-icon">⛏️</span><div><strong>Ça fait crac.</strong><p>De faibles indices géologiques peuvent suggérer où commencer. Des scans répétés peuvent révéler une très légère anomalie sous la roche.</p></div></div>
+      </section>
+
+      <section class="panel" data-panel="workbench">
+        <div class="section-heading">
+          <div><p class="eyebrow">ATELIER DE SURFACE</p><h2>Établi</h2></div>
+          <p>Une petite étincelle apparaît sur la fiche du matériau quand tu en as dans ton inventaire.</p>
+        </div>
+        <div class="workbench-sell-bar">
+          <div>
+            <span class="status-label">Stock vendable en vrac</span>
+            <strong id="masteredSellValue">0¢ admissible</strong>
+            <span class="status-note">Tout vendre ne touche qu’aux minéraux et minerais dont l’ensemble du musée est complet.</span>
+          </div>
+          <button id="sellAllMasteredButton" class="primary-button" type="button">Tout vendre</button>
+        </div>
+        <div id="workbenchList" class="workbench-list"></div>
+      </section>
+
+      <section class="panel" data-panel="museum">
+        <div class="section-heading">
+          <div><p class="eyebrow">LA COLLECTION</p><h2>Musée</h2></div>
+          <p>Chaque spécimen garde sa propre fiche-info. Complète un ensemble pour débloquer son fait bonus et son automatisation.</p>
+        </div>
+        <div class="collection-progress-card"><div><span class="status-label">Progression du musée</span><strong id="museumCount">0 / 58</strong></div><div class="big-meter"><span id="museumMeter"></span></div></div>
+        <div id="museumWings" class="museum-wings"></div>
+      </section>
+
+      <section class="panel" data-panel="achievements">
+        <div class="section-heading">
+          <div><p class="eyebrow">BIZARRERIES ET JALONS</p><h2>Succès</h2></div>
+          <p>Certains sont évidents. D’autres pas du tout. Le jeu te regarde.</p>
+        </div>
+        <div class="collection-progress-card"><div><span class="status-label">Débloqués</span><strong id="achievementCount">0 / 24</strong></div><div class="big-meter"><span id="achievementMeter"></span></div></div>
+        <div id="achievementGrid" class="achievement-grid"></div>
+      </section>
+
+      <section class="panel" data-panel="upgrades">
+        <div class="section-heading"><div><p class="eyebrow">ÉQUIPEMENT ET OPÉRATIONS</p><h2>Améliorations</h2></div><p>Le meilleur équipement se gagne en jouant. Rien ne coûte d’argent réel.</p></div>
+        <div class="shop-balance"><span class="status-label">Solde actuel</span><strong id="shopBalance">0¢</strong></div>
+        <div id="upgradeList" class="upgrade-list"></div>
+        <div class="design-note"><strong>Règle de jeu équitable</strong><p>Le traitement est gratuit. Les scans et la durabilité de la pioche se réinitialisent avec chaque nouvelle paroi. Aucun temps d’attente réel, aucune monnaie premium, aucun paiement pour sauter une étape.</p></div>
+        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.1</button>
+      </section>
+    </main>
+
+    <div id="mobileMineHud" class="mobile-mine-hud" aria-live="polite">
+      <span id="mobileDurability">⛏️ 0 / 0</span>
+      <span id="mobileScans">⌁ verrouillé</span>
+    </div>
+
+    <nav class="bottom-nav" aria-label="Navigation du jeu">
+      <button class="nav-button active" type="button" data-target="mine"><span>⛏️</span><small>Mine</small></button>
+      <button class="nav-button" type="button" data-target="workbench"><span>🛠️</span><small>Établi</small></button>
+      <button class="nav-button" type="button" data-target="museum"><span>🏛️</span><small>Musée</small></button>
+      <button class="nav-button" type="button" data-target="achievements"><span>🏆</span><small>Succès</small></button>
+      <button class="nav-button" type="button" data-target="upgrades"><span>⬆️</span><small>Amélior.</small></button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
