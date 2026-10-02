@@ -1,90 +1,95 @@
 # Cherche-cailloux
 
-**Bêta 1.2.2 — Mise à jour du carnet de découvertes**
+**Bêta 1.5.7 — polissage final de l’interface**
 
 > ça fait crac.
 
-Cherche-cailloux est un jeu de minage incrémental pour navigateur, fini et axé sur la collection. Mine une paroi rocheuse de 10×10, suis de petits indices géologiques, utilise des outils de prospection, traite tes trouvailles à l’établi, remplis un musée et automatise progressivement les matériaux que tu maîtrises complètement.
+Cherche-cailloux est un jeu incrémental fini, axé sur la collection et l’exploitation minière dans le navigateur. Mine une paroi fixe de 10×10, suis des indices géologiques, utilise des outils de prospection, traite tes trouvailles à l’Établi, remplis un musée, améliore ton équipement et progresse à travers six profondeurs distinctes.
 
-Le jeu mise sur la découverte active plutôt que sur les minuteries ou les frustrations monétisées. Il n’y a qu’une seule monnaie en jeu, le traitement est gratuit, les charges des outils se réinitialisent avec une nouvelle paroi, et il n’y a ni monnaie premium, ni minuterie d’énergie, ni paiement pour sauter une étape, ni progression achetée avec de l’argent réel.
+## Jeu principal
 
-## Boucle principale
+La boucle principale est **creuser → découvrir → traiter, donner ou vendre → améliorer le musée et l’équipement → descendre plus profond → trouver des roches plus étranges**. Les spécimens communs restent utiles, plus profond ne veut pas automatiquement dire meilleur, et la collection repose sur de vraies relations minéralogiques plutôt que sur des niveaux de rareté génériques.
 
-**Creuser → découvrir → traiter, donner ou vendre → améliorer le musée et l’équipement → descendre plus profond → trouver des cailloux de plus en plus étranges.**
+Le jeu complet contient **44 sujets principaux** répartis sur six profondeurs et quatre ailes du musée : 24 minéraux, gemmes et minéraloïdes, 8 sujets minerai/métal, 6 fossiles et 6 objets historiques. Compléter le musée est la vraie fin du jeu. Rien ne se réinitialise et rien ne t’est retiré.
 
-Un spécimen commun peut rester utile pendant toute la partie. Plus profond ne veut pas automatiquement dire « meilleur », et les minéraux ne suivent pas une échelle de rareté générique.
+## Après-jeu : Collection personnelle
 
-## Minage
+Compléter le musée débloque l’onglet **Collection personnelle** et prolonge la boucle minière existante au lieu de la remplacer.
 
-Chaque paroi rocheuse est une grille fixe de **10×10** contenant des trouvailles isolées, de petits filons connectés, de gros filons occasionnels, des fossiles et des objets historiques. De subtils indices dans la roche peuvent suggérer des endroits prometteurs sans révéler les cibles exactes.
+- Les **Spécimens exceptionnels** peuvent commencer à apparaître sur les parois d’après-jeu. Ce sont des variantes nommées et choisies de matériaux familiers, conçues pour montrer que chaque minéral peut être intéressant pour des raisons géologiques différentes.
+- La **Réserve de spécimens** est pratiquement illimitée. Les trouvailles exceptionnelles peuvent y être gardées indéfiniment, qu’elles soient exposées ou non.
+- La **Vitrine** comporte 21 emplacements libres, affichés trois par rangée sur mobile. Les spécimens exposés sont protégés contre la vente.
+- Les spécimens exceptionnels peuvent aussi être vendus individuellement contre la monnaie normale du jeu. Il n’y a ni liste de variantes à compléter ni pourcentage de complétion.
 
-Les outils de prospection donnent de l’information sans résoudre la grille à ta place :
+## Fournitures de prospection d’après-jeu
 
-- **Scanner de zone :** choisis une case pour sonder son voisinage 3×3. Les cases scannées restent marquées sur cette paroi. Les premiers niveaux indiquent surtout la chimie; un meilleur scanner ajoute des renseignements sur la forme du dépôt et peut finir par identifier précisément les minéraux. Scanner deux fois une zone occupée peut révéler une très faible ombre de densité générique sans montrer ce qui s’y cache.
-- **Détecteur de métaux :** un seul balayage de toute la paroi. Il marque de grandes zones volontairement imprécises pouvant contenir des cibles métalliques ou conductrices, y compris certains objets historiques.
+Trois consommables optionnels donnent aux joueurs ayant terminé le jeu des façons utiles de dépenser leur argent pendant la chasse aux spécimens exceptionnels. Ils s’achètent dans la **Boutique** et s’arment depuis la **Mine** pour la prochaine nouvelle paroi. On peut changer de profondeur ou générer une autre paroi sans les dépenser. Les fournitures armées ne sont consommées qu’au moment où la première case de la paroi préparée est minée.
 
-Les deux outils utilisent des charges par paroi plutôt que des minuteries de recharge en temps réel.
+- **Trousse de prospecteur — 40,00 $ :** fait passer la chance de spécimen exceptionnel de 5 % à 50 % sur la paroi préparée.
+- **Trousse de maître prospecteur — 100,00 $ :** fait passer cette chance de 5 % à 80 %.
+- **Cible du collectionneur — 40,00 $ :** choisis un matériau admissible avant de préparer la paroi; si un spécimen exceptionnel apparaît et que ce matériau est présent, la cible reçoit une pondération de 60 %.
 
-## Établi
+Une seule trousse peut être armée à la fois. L’une ou l’autre peut se combiner avec la Cible du collectionneur. Les spécimens exceptionnels peuvent toujours apparaître naturellement sans fournitures, et il ne peut y en avoir qu’un par paroi. La Craie d’arpentage a été retirée en Bêta 1.5.6; toute craie inutilisée provenant d’une ancienne sauvegarde est automatiquement remboursée au plein prix.
 
-Les minéraux peuvent passer par des formes comme **Brut → Roulé → Taillé**. Les minerais peuvent être raffinés en leurs métaux associés. Le traitement lui-même ne coûte rien, même si les matériaux plus avancés exigent un meilleur équipement d’atelier.
+## Fin et succès
 
-Compléter toutes les formes d’un matériau transformable au musée débloque le **traitement automatique pour ce matériau précis**. Le bouton global Tout vendre est lui aussi lié à la maîtrise et ne vend que le stock provenant d’ensembles complets de minéraux et de minerais.
+La fin du musée accorde toujours la Plaque de complétion permanente et la Pioche d’acier doré pratiquement incassable. Continuer à miner est optionnel : le jeu est terminé lorsque le musée est terminé.
 
-## Musée
+Cherche-cailloux contient **50 succès**. Les succès non obtenus restent secrets jusqu’à leur déblocage. **VRAI CHERCHE-CAILLOUX** marque la complétion du musée, tandis que **CAILLOUXHOLIQUE** est le défi de complétion totale : tous les autres succès, toutes les améliorations permanentes au maximum et tous les sujets principaux découverts. La Collection personnelle n’a pas de liste de complétion.
 
-Le musée montre ses emplacements vides à l’avance et donne à chaque forme collectionnée sa propre fiche de géologie ou de gemmologie. Compléter un ensemble ajoute une découverte bonus et débloque l’automatisation du matériau lorsque c’est pertinent.
+## Changements de la Bêta 1.5.7
 
-La Bêta 1.2 ajoute une **lampe UV de fluorescence**. Une fois installée, le musée obtient un contrôle d’éclairage **Normal / UV**. La plupart des spécimens restent sombres sous UV, tandis que certains matériaux fluorescents révèlent des couleurs lumineuses distinctives.
+- Mémorise la position de défilement de chaque onglet pendant la partie afin de revenir exactement où tu étais dans le Musée ou un autre panneau.
+- Ajoute l’accès direct **Inspecter** aux spécimens exceptionnels déjà placés dans la Vitrine; plus besoin de les remettre dans la Réserve d’abord.
+- Réorganise les Succès en une grille de badges plus dense sur deux colonnes, sans grandes cartes ordinaires ni trous gênants.
+- Rend tous les succès non obtenus secrets en affichant uniquement **???** pour leur nom et leur description jusqu’à leur déblocage.
+- Réserve le format pleine largeur à **VRAI CHERCHE-CAILLOUX** et **CAILLOUXHOLIQUE**.
+- Donne aux icônes de succès un traitement compact de type médaille tout en gardant les symboles simples faciles à lire.
+- Conserve la clé de sauvegarde française existante `rock-go-crunch-v2` pour éviter d’écraser la progression de la version anglaise.
 
-Ailes actuelles du musée :
+## Changements de la Bêta 1.5.6
 
-- Salle des minéraux
-- Minerais et métaux
-- Aile des fossiles
-- Aile historique
+- Corrige le texte de récompense de fin pour indiquer que la Collection personnelle possède **21 emplacements d’exposition**.
+- Réécrit le fait bonus de l’Or natif afin qu’il ne contredise plus la récompense de la Pioche d’acier doré.
+- Transforme les fossiles et objets historiques non découverts en véritables entrées mystère : noms et images restent cachés jusqu’à la première découverte, tandis que les indices compacts de profondeur restent visibles.
+- Retire les étiquettes redondantes « Spécimen fossile » et « Objet historique » des cartes à une seule étape du musée.
+- Remplace le sous-titre générique « Exceptionnel [matériau] » dans la Vitrine par une courte explication géologique ou minéralogique de ce qui rend chaque spécimen inhabituel.
+- Retire la **Craie d’arpentage** et rembourse automatiquement toute craie inutilisée des anciennes sauvegardes au plein prix.
+- Fait passer la chance de la **Trousse de prospecteur** de 30 % à **50 %**.
+- Ajoute la **Trousse de maître prospecteur** à 100,00 $ avec une chance de **80 %**. Une seule trousse peut être armée à la fois; chacune peut se combiner avec la Cible du collectionneur.
+- Met à jour le succès **Bien préparé** pour exiger une trousse et la Cible du collectionneur sur la même paroi.
+- Conserve la clé de sauvegarde française existante et la progression antérieure.
 
-## Profondeurs actuelles de la mine
+## Changements de la Bêta 1.5.5
 
-### Profondeur 1 — Filon supérieur
-Quartz, améthyste, hématite, chalcopyrite et premières trouvailles secondaires.
+- Corrige le Scanner de terrain qui cessait de fonctionner après avoir touché une case cible.
+- Rétablit le chemin simple et délégué de clic/toucher; les solutions tactiles précédentes n’étaient pas la vraie cause.
+- Ajoute les fonctions d’analyse manquantes pour l’intensité du signal et les motifs de dépôt, qui faisaient planter le scan avant sa fin.
 
-### Profondeur 2 — Galeries basses
-Ajoute grenat, topaze, pyrite, trilobites, fragments de crinoïdes et davantage d’options de prospection.
+## Changements de la Bêta 1.5.4
 
-### Profondeur 3 — Galerie profonde
-Ajoute citrine, calcite, fluorite, aigue-marine, saphir, cassitérite, ammonites et des traces historiques plus profondes.
+- Corrige le ciblage du scanner sur iPhone/iPad et dans les navigateurs intégrés basés sur WebKit en déclenchant le scan au premier contact plutôt qu’en attendant un événement ultérieur.
+- Ajoute un repli `touchstart` pour certains environnements WebKit.
+- Empêche le clic synthétique suivant de miner accidentellement la case sélectionnée.
 
-### Profondeur 4 — Filons cristallins
-Ajoute quartz rose, malachite, rubis, émeraude, galène, sphalérite, brachiopodes et d’autres objets liés à l’histoire minière.
+## Changements de la Bêta 1.5.2
 
-### Profondeur 5 — Zone lumineuse
-Ajoute scheelite et tungstène, willemite, hackmanite, apatite, opale, bélemnites et de vieilles pièces de rails miniers. Cette profondeur introduit le premier système consacré à une propriété des minéraux : la fluorescence UV.
+- Corrige le ciblage du scanner afin qu’un toucher sur une case lance correctement le scan 3×3 sélectionné, y compris sur les appareils tactiles.
+- Déplace l’entrée des cases minières vers un seul gestionnaire au niveau de la grille plutôt que d’attacher de nouveaux écouteurs à chaque case après chaque rafraîchissement.
 
-## Changements de la Bêta 1.2.2
+## Changements de la Bêta 1.5.1
 
-- L’Établi agit maintenant comme un carnet de terrain : seuls les spécimens que tu as réellement découverts y apparaissent.
-- Chaque fiche découverte indique la ou les profondeurs où tu as rencontré ce spécimen.
-- Les minéraux, minerais/métaux et objets historiques encore inconnus sont masqués au Musée jusqu’à ce que tu en trouves au moins un. Les emplacements vides restent visibles sans révéler leur identité.
-- Le niveau le plus avancé du scanner ne révèle plus le nom exact d’un minéral encore inconnu avant que tu ne l’aies trouvé physiquement.
-- Les descriptions des améliorations révèlent moins de contenu à l’avance afin que les futures trouvailles restent des surprises.
-- Les sauvegardes existantes de la Bêta 1.2.x sont migrées automatiquement. Les spécimens déjà découverts restent découverts; comme les anciennes versions ne conservaient pas l’historique des profondeurs, des emplacements connus utiles sont ajoutés aux anciennes découvertes.
-- Inclut le correctif Bêta 1.2.1 qui rétablit l’affichage des sprites sur la paroi rocheuse.
+- Garde les fenêtres d’images du Musée compactes et presque carrées dans les affichages à une, deux ou trois étapes afin d’éviter de rogner maladroitement les illustrations finales.
+- Réduit la Vitrine de la Collection personnelle de 30 à 21 emplacements tout en gardant la Réserve de spécimens illimitée.
+- Renforce la lueur des spécimens réactifs aux UV et assombrit légèrement le reste du musée pour mieux les faire ressortir.
 
-## Changements de la Bêta 1.2
+## Changements de la Bêta 1.5.0
 
-- Ajout de la **Profondeur 5 : Zone lumineuse**.
-- Ajout de **Scheelite → Tungstène**, **Willemite**, **Hackmanite**, **Apatite** et **Opale**.
-- Ajout du fossile **Bélemnite** et de l’objet historique **Vieux crampon de rail**.
-- Ajout d’un nouvel **Atelier lapidaire spécialisé** pour les matériaux de la profondeur 5.
-- Ajout de la **lampe UV de fluorescence** et d’un mode d’éclairage Normal / UV pour tout le musée.
-- Ajout d’un comportement sous UV à certains anciens spécimens, notamment la fluorite, la calcite, le rubis et la sphalérite.
-- Réorganisation de l’écran de mine : toutes les profondeurs sont visibles dans un sélecteur dédié, la liste complète « Trouvé sur cette paroi » reste visible, et le scanner et le détecteur de métaux deviennent deux commandes compactes côte à côte sous la paroi.
-- Les explications du scanner et du détecteur ont été déplacées vers l’écran Améliorations.
-- Les états d’amélioration terminés sont simplifiés en **MAX** ou **MAX (d’autres arrivent bientôt... 👀)**.
-- Ajout de petits reflets occasionnels et subtils sur les illustrations de gemmes et de minéraux.
-- Conservation de la présentation compacte des succès façon étagère à trophées, avec ajout de **Coup d’éclat** et **Le spectacle fluorescent** pour le nouveau système UV.
+- Remplace les formes temporaires par le jeu d’illustrations final de Cherche-cailloux.
+- Ajoute des **mini-sprites miniers** dédiés à chaque minéral et minerai brut, plus des icônes communes pour les fossiles et les objets historiques.
+- Ajoute **95 sprites détaillés propres aux étapes** dans le Musée et l’Établi, y compris les chaînes particulières Diamant brut → Clivé → Taillé, Olivine brute → Olivine roulée → Péridot taillé et Malachite brute → Roulée → Polie.
+- Ajoute les illustrations détaillées de tous les **Spécimens exceptionnels** de la Réserve de spécimens et de la Collection personnelle.
+- Les trouvailles exceptionnelles dans la mine gardent leur mini-sprite propre et reçoivent un petit effet d’étincelles; le spécimen détaillé est révélé dans la collection.
+- Conserve l’interaction de la lampe UV du musée et ses effets de fluorescence sur les illustrations finales.
 
-## État du projet
-
-Cherche-cailloux est encore en bêta. La mine, le musée, l’établi, les améliorations, les systèmes de prospection, les succès et la migration des sauvegardes sont fonctionnels. Les profondeurs suivantes, la véritable fin du jeu, la Collection personnelle, les spécimens exceptionnels, les géodes et la Pioche en acier doré restent du contenu futur.
+Le jeu est maintenant dans sa phase de polissage et de test final. La passe artistique change la présentation, pas la progression centrale ni la fin.

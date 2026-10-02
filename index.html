@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#111416" />
-  <title>Cherche-cailloux — Bêta 1.2.2</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Cherche-cailloux — Bêta 1.5.7</title>
+  <link rel="stylesheet" href="style.css?v=1.5.7" />
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
       <div>
-        <p class="eyebrow">BÊTA 1.2.2</p>
+        <p class="eyebrow">BÊTA 1.5.7</p>
         <h1 id="gameTitle">CHERCHE-CAILLOUX</h1>
         <p id="gameTagline" class="subtitle">ça fait crac.</p>
       </div>
-      <button id="soundToggle" class="icon-button" type="button" aria-label="Activer ou couper le son">🔊</button>
     </header>
+
 
     <main>
       <section class="panel active" data-panel="mine">
@@ -24,8 +24,9 @@
           <div class="status-card"><span class="status-label">Profondeur</span><strong id="depthName">Filon supérieur</strong><span id="depthNumber" class="status-note">Profondeur 1</span></div>
           <div class="status-card"><span class="status-label">Durabilité de la pioche</span><strong><span id="durability">0</span>/<span id="maxDurability">0</span></strong><div class="meter"><span id="durabilityMeter"></span></div></div>
           <div class="status-card"><span class="status-label">Scanner</span><strong id="surveyLevel">Aucun</strong><span id="scanUseSummary" class="status-note">verrouillé</span></div>
-          <div class="status-card"><span class="status-label">Solde</span><strong id="mineBalance">0¢</strong><span class="status-note">une seule monnaie</span></div>
+          <div class="status-card"><span class="status-label">Solde</span><strong id="mineBalance">0¢</strong></div>
         </div>
+
 
         <div class="mine-card">
           <div class="mine-heading">
@@ -33,52 +34,77 @@
             <button id="newFaceButton" class="secondary-button" type="button">Nouvelle paroi</button>
           </div>
 
+
           <div class="depth-picker">
             <span class="status-label">Choisir la profondeur</span>
             <div id="depthSelector" class="depth-selector"></div>
+            <div id="depthFieldNote" class="depth-field-note"></div>
           </div>
 
+
           <div class="mine-feedback">
-            <div id="mineMessage" class="message-card mine-message-inline"><span class="message-icon">⛏️</span><div><strong>Ça fait crac.</strong><p>De faibles indices géologiques peuvent suggérer où commencer. Des scans répétés peuvent révéler une très légère anomalie sous la roche.</p></div></div>
             <div class="face-find-strip"><span class="status-label">Trouvé sur cette paroi</span><div id="faceFinds" class="face-find-list"><span class="face-find-empty">Rien pour l’instant</span></div></div>
           </div>
 
+
           <div id="mineBoard" class="mine-board" aria-label="Grille minière 10 par 10"></div>
+
+
+          <div id="mineMessage" class="message-card mine-message-inline"><span class="message-icon">⛏️</span><div><strong>Ça fait crac.</strong><p>De faibles indices géologiques peuvent suggérer où commencer. Des scans répétés peuvent révéler une très légère anomalie sous la roche.</p></div></div>
+
 
           <div class="mine-tool-buttons" aria-label="Outils de prospection">
             <button id="scanButton" class="mine-tool-button" type="button"><span class="tool-button-icon">⌁</span><span><strong>Scanner la zone</strong><small id="scanButtonStatus">Verrouillé</small></span></button>
             <button id="metalDetectorButton" class="mine-tool-button" type="button"><span class="tool-button-icon">🧲</span><span><strong>Balayer la paroi</strong><small id="detectorButtonStatus">Verrouillé</small></span></button>
           </div>
 
+          <div id="postgameProspectingTools" class="postgame-prospecting-tools hidden" aria-label="Fournitures de prospection d’après-jeu">
+            <button id="prospectorKitButton" class="postgame-supply-button" type="button"><span>🎒</span><strong>Trousse</strong><small id="prospectorKitStatus">0 en stock</small></button>
+            <button id="masterProspectorKitButton" class="postgame-supply-button" type="button"><span>🧰</span><strong>Maître</strong><small id="masterProspectorKitStatus">0 en stock</small></button>
+            <button id="collectorsFocusButton" class="postgame-supply-button" type="button"><span>◎</span><strong>Cible</strong><small id="collectorsFocusStatus">0 en stock</small></button>
+          </div>
+          <div id="collectorFocusPicker" class="collector-focus-picker hidden">
+            <label for="collectorFocusMineSelect"><span>Cible du collectionneur</span><select id="collectorFocusMineSelect"></select></label>
+            <button id="applyCollectorFocusButton" class="secondary-button" type="button">Armer la cible</button>
+          </div>
+
+
           <div class="run-footer mine-actions">
-            <span class="status-note">Les outils se réinitialisent avec chaque nouvelle paroi.</span>
+            <span class="status-note">Le scanner et le détecteur se réinitialisent avec chaque nouvelle paroi.</span>
             <button id="surfaceButton" class="primary-button" type="button">Retour à la surface</button>
           </div>
         </div>
       </section>
+
 
       <section class="panel" data-panel="workbench">
         <div class="section-heading">
           <div><p class="eyebrow">ATELIER DE SURFACE</p><h2>Établi</h2></div>
           <p>Ton carnet de terrain se remplit à mesure que tu découvres des spécimens. Chaque fiche connue indique les profondeurs où tu l’as rencontré.</p>
         </div>
+        <div class="workbench-discovery-card" aria-live="polite">
+          <span class="status-label">Carnet de terrain</span>
+          <strong id="workbenchDiscoveryCount">0 / 44 spécimens découverts</strong>
+        </div>
         <div class="workbench-sell-bar">
           <div>
             <span class="status-label">Stock vendable en vrac</span>
             <strong id="masteredSellValue">0¢ admissible</strong>
-            <span class="status-note">Tout vendre ne touche qu’aux minéraux et minerais dont l’ensemble du musée est complet.</span>
+            <span class="status-note">Tout vendre ne touche qu’aux minéraux, minerais, fossiles et objets historiques dont l’ensemble du musée est complet.</span>
           </div>
           <button id="sellAllMasteredButton" class="primary-button" type="button">Tout vendre</button>
         </div>
         <div id="workbenchList" class="workbench-list"></div>
       </section>
 
+
       <section class="panel" data-panel="museum">
         <div class="section-heading">
           <div><p class="eyebrow">LA COLLECTION</p><h2>Musée</h2></div>
           <p>Chaque spécimen garde sa propre fiche-info. Complète un ensemble pour débloquer son fait bonus et son automatisation.</p>
         </div>
-        <div class="collection-progress-card"><div><span class="status-label">Progression du musée</span><strong id="museumCount">0 / 74</strong></div><div class="big-meter"><span id="museumMeter"></span></div></div>
+        <div class="collection-progress-card"><div><span class="status-label">Progression du musée</span><strong id="museumCount">0 / 95</strong></div><div class="big-meter"><span id="museumMeter"></span></div></div>
+        <div id="completionPlaque" class="completion-plaque hidden"></div>
         <div id="museumLighting" class="museum-lighting hidden" aria-label="Contrôles d’éclairage du musée">
           <div><span class="status-label">Éclairage du musée</span><strong>Lampe UV de fluorescence</strong></div>
           <div class="lighting-toggle" role="group" aria-label="Choisir l’éclairage du musée">
@@ -89,39 +115,81 @@
         <div id="museumWings" class="museum-wings"></div>
       </section>
 
+
+      <section id="personalCollectionPanel" class="panel hidden" data-panel="collection">
+        <div class="section-heading">
+          <div><p class="eyebrow">SALLE D’APRÈS-JEU</p><h2>Collection personnelle</h2></div>
+          <p>Pars à la recherche de spécimens extraordinaires, garde ceux que tu aimes et compose une vitrine entièrement à toi. Aucune liste. Aucun pourcentage.</p>
+        </div>
+        <div id="postgameWorkbench" class="postgame-workbench hidden"></div>
+        <section id="personalCollectionSection" class="personal-collection hidden">
+          <div class="personal-heading">
+            <div><span class="status-label">Vitrine</span><h3>Ta vitrine. Tes règles.</h3></div>
+            <p>Les spécimens exceptionnels peuvent rester dans la Réserve de spécimens, qu’ils soient exposés ou non. Tout ce qui est dans la vitrine est protégé contre la vente.</p>
+          </div>
+          <div id="personalCollectionGrid" class="personal-collection-grid"></div>
+        </section>
+        <section id="specimenStorageSection" class="specimen-storage hidden"></section>
+      </section>
+
+
       <section class="panel" data-panel="achievements">
         <div class="section-heading">
           <div><p class="eyebrow">BIZARRERIES ET JALONS</p><h2>Succès</h2></div>
           <p>Certains sont évidents. D’autres pas du tout. Le jeu te regarde.</p>
         </div>
-        <div class="collection-progress-card"><div><span class="status-label">Débloqués</span><strong id="achievementCount">0 / 26</strong></div><div class="big-meter"><span id="achievementMeter"></span></div></div>
+        <div class="collection-progress-card"><div><span class="status-label">Débloqués</span><strong id="achievementCount">0 / 50</strong></div><div class="big-meter"><span id="achievementMeter"></span></div></div>
         <div id="achievementGrid" class="achievement-grid"></div>
       </section>
 
+
       <section class="panel" data-panel="upgrades">
-        <div class="section-heading"><div><p class="eyebrow">ÉQUIPEMENT ET OPÉRATIONS</p><h2>Améliorations</h2></div><p>Le meilleur équipement se gagne en jouant. Rien ne coûte d’argent réel.</p></div>
+        <div class="section-heading"><div><p class="eyebrow">ÉQUIPEMENT ET FOURNITURES</p><h2>Boutique</h2></div><p>Équipement permanent, accès à la mine et fournitures optionnelles de prospection d’après-jeu.</p></div>
         <div class="shop-balance"><span class="status-label">Solde actuel</span><strong id="shopBalance">0¢</strong></div>
+        <section id="prospectingShop" class="prospecting-shop hidden"></section>
         <div id="upgradeList" class="upgrade-list"></div>
-        <div class="design-note"><strong>Règle de jeu équitable</strong><p>Le traitement est gratuit. Les charges du scanner et la durabilité de la pioche se réinitialisent avec chaque nouvelle paroi. Aucun temps d’attente réel, aucune monnaie premium, aucun paiement pour sauter une étape.</p></div>
-        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.2.2</button>
+        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.5.7</button>
       </section>
     </main>
 
+
     <div id="mobileMineHud" class="mobile-mine-hud" aria-live="polite">
       <span id="mobileDurability">⛏️ 0 / 0</span>
-      <span id="mobileScans">⌁ verrouillé</span>
+      <span id="mobileScans">⌁ locked</span>
     </div>
+
 
     <nav class="bottom-nav" aria-label="Navigation du jeu">
       <button class="nav-button active" type="button" data-target="mine"><span>⛏️</span><small>Mine</small></button>
       <button class="nav-button" type="button" data-target="workbench"><span>🛠️</span><small>Établi</small></button>
       <button class="nav-button" type="button" data-target="museum"><span>🏛️</span><small>Musée</small></button>
+      <button id="collectionNavButton" class="nav-button hidden" type="button" data-target="collection"><span>💎</span><small>Collection<br>personnelle</small></button>
       <button class="nav-button" type="button" data-target="achievements"><span>🏆</span><small>Succès</small></button>
-      <button class="nav-button" type="button" data-target="upgrades"><span>⬆️</span><small>Amélior.</small></button>
+      <button class="nav-button" type="button" data-target="upgrades"><span>🛒</span><small>Boutique</small></button>
     </nav>
   </div>
 
+
+  <div id="completionModal" class="completion-modal hidden" role="dialog" aria-modal="true" aria-labelledby="completionTitle">
+    <div class="completion-dialog">
+      <p class="eyebrow">MUSÉE COMPLET</p>
+      <h2 id="completionTitle">TABAROUETTE. Tu l’as vraiment fait!</h2>
+      <div id="completionBody"></div>
+      <button id="keepMiningButton" class="primary-button completion-continue" type="button">CONTINUER À MINER</button>
+    </div>
+  </div>
+
+  <div id="specimenInspectModal" class="specimen-inspect-modal hidden" role="dialog" aria-modal="true" aria-labelledby="specimenInspectTitle">
+    <div class="specimen-inspect-dialog">
+      <button id="specimenInspectClose" class="specimen-inspect-close" type="button" aria-label="Fermer l’inspection du spécimen">×</button>
+      <p class="eyebrow">SPÉCIMEN EXCEPTIONNEL</p>
+      <img id="specimenInspectImage" class="specimen-inspect-image" src="" alt="" />
+      <h2 id="specimenInspectTitle"></h2>
+      <p id="specimenInspectDetail" class="specimen-inspect-detail-copy"></p>
+      <div id="specimenInspectMeta" class="specimen-inspect-meta"></div>
+    </div>
+  </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+  <script src="script.js?v=1.5.7"></script>
 </body>
 </html>
