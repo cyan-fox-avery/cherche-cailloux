@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#111416" />
-  <title>Cherche-cailloux — Bêta 1.5.7</title>
-  <link rel="stylesheet" href="style.css?v=1.5.7" />
+  <title>Cherche-cailloux — Bêta 1.5.8</title>
+  <link rel="stylesheet" href="style.css?v=1.5.8" />
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
       <div>
-        <p class="eyebrow">BÊTA 1.5.7</p>
+        <p class="eyebrow">BÊTA 1.5.8</p>
         <h1 id="gameTitle">CHERCHE-CAILLOUX</h1>
         <p id="gameTagline" class="subtitle">ça fait crac.</p>
       </div>
     </header>
+
+
 
 
     <main>
@@ -28,11 +30,15 @@
         </div>
 
 
+
+
         <div class="mine-card">
           <div class="mine-heading">
             <div><h2>Paroi rocheuse</h2><p>Observe la roche, sonde les zones prometteuses, puis suis les filons que tu découvres.</p></div>
             <button id="newFaceButton" class="secondary-button" type="button">Nouvelle paroi</button>
           </div>
+
+
 
 
           <div class="depth-picker">
@@ -42,21 +48,30 @@
           </div>
 
 
+
+
           <div class="mine-feedback">
             <div class="face-find-strip"><span class="status-label">Trouvé sur cette paroi</span><div id="faceFinds" class="face-find-list"><span class="face-find-empty">Rien pour l’instant</span></div></div>
           </div>
 
 
+
+
           <div id="mineBoard" class="mine-board" aria-label="Grille minière 10 par 10"></div>
 
 
+
+
           <div id="mineMessage" class="message-card mine-message-inline"><span class="message-icon">⛏️</span><div><strong>Ça fait crac.</strong><p>De faibles indices géologiques peuvent suggérer où commencer. Des scans répétés peuvent révéler une très légère anomalie sous la roche.</p></div></div>
+
+
 
 
           <div class="mine-tool-buttons" aria-label="Outils de prospection">
             <button id="scanButton" class="mine-tool-button" type="button"><span class="tool-button-icon">⌁</span><span><strong>Scanner la zone</strong><small id="scanButtonStatus">Verrouillé</small></span></button>
             <button id="metalDetectorButton" class="mine-tool-button" type="button"><span class="tool-button-icon">🧲</span><span><strong>Balayer la paroi</strong><small id="detectorButtonStatus">Verrouillé</small></span></button>
           </div>
+
 
           <div id="postgameProspectingTools" class="postgame-prospecting-tools hidden" aria-label="Fournitures de prospection d’après-jeu">
             <button id="prospectorKitButton" class="postgame-supply-button" type="button"><span>🎒</span><strong>Trousse</strong><small id="prospectorKitStatus">0 en stock</small></button>
@@ -69,12 +84,16 @@
           </div>
 
 
+
+
           <div class="run-footer mine-actions">
             <span class="status-note">Le scanner et le détecteur se réinitialisent avec chaque nouvelle paroi.</span>
             <button id="surfaceButton" class="primary-button" type="button">Retour à la surface</button>
           </div>
         </div>
       </section>
+
+
 
 
       <section class="panel" data-panel="workbench">
@@ -98,6 +117,8 @@
       </section>
 
 
+
+
       <section class="panel" data-panel="museum">
         <div class="section-heading">
           <div><p class="eyebrow">LA COLLECTION</p><h2>Musée</h2></div>
@@ -114,6 +135,8 @@
         </div>
         <div id="museumWings" class="museum-wings"></div>
       </section>
+
+
 
 
       <section id="personalCollectionPanel" class="panel hidden" data-panel="collection">
@@ -133,6 +156,8 @@
       </section>
 
 
+
+
       <section class="panel" data-panel="achievements">
         <div class="section-heading">
           <div><p class="eyebrow">BIZARRERIES ET JALONS</p><h2>Succès</h2></div>
@@ -143,20 +168,26 @@
       </section>
 
 
+
+
       <section class="panel" data-panel="upgrades">
         <div class="section-heading"><div><p class="eyebrow">ÉQUIPEMENT ET FOURNITURES</p><h2>Boutique</h2></div><p>Équipement permanent, accès à la mine et fournitures optionnelles de prospection d’après-jeu.</p></div>
         <div class="shop-balance"><span class="status-label">Solde actuel</span><strong id="shopBalance">0¢</strong></div>
         <section id="prospectingShop" class="prospecting-shop hidden"></section>
         <div id="upgradeList" class="upgrade-list"></div>
-        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.5.7</button>
+        <button id="resetButton" class="danger-button" type="button">Réinitialiser la sauvegarde Bêta 1.5.8</button>
       </section>
     </main>
+
+
 
 
     <div id="mobileMineHud" class="mobile-mine-hud" aria-live="polite">
       <span id="mobileDurability">⛏️ 0 / 0</span>
       <span id="mobileScans">⌁ locked</span>
     </div>
+
+
 
 
     <nav class="bottom-nav" aria-label="Navigation du jeu">
@@ -170,6 +201,8 @@
   </div>
 
 
+
+
   <div id="completionModal" class="completion-modal hidden" role="dialog" aria-modal="true" aria-labelledby="completionTitle">
     <div class="completion-dialog">
       <p class="eyebrow">MUSÉE COMPLET</p>
@@ -178,6 +211,7 @@
       <button id="keepMiningButton" class="primary-button completion-continue" type="button">CONTINUER À MINER</button>
     </div>
   </div>
+
 
   <div id="specimenInspectModal" class="specimen-inspect-modal hidden" role="dialog" aria-modal="true" aria-labelledby="specimenInspectTitle">
     <div class="specimen-inspect-dialog">
@@ -190,6 +224,6 @@
     </div>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=1.5.7"></script>
+  <script src="script.js?v=1.5.8"></script>
 </body>
 </html>
